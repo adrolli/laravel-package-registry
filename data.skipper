@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<skipper version="3.2.31.1730" mvc="Laravel" orm="Laravel" name="Laravel Package Registry" uuid="ae2edcc2-e784-4449-a0e0-b84a2e43ef2c">
+  <orm-attributes>
+    <attribute name="migrations-path">database/migrations</attribute>
+  </orm-attributes>
+  <module name="\Application module" local-name="Application module" namespace="\App\Models" local-namespace="App\Models" export-format="Laravel" export-path="." uuid="241fa78d-83f5-4072-98fa-5b3ddec048c7">
+    <entity name="\App\Models\Vendors" local-name="Vendors" namespace="\App\Models" description="All Vendors for Laravel Packages and Solutions" uuid="73bf013e-ced1-478e-a6fa-c20ee9368a5e">
+      <field name="id" type="bigInteger" required="true" unique="true" primary="true" unsigned="true" auto-increment="true" uuid="0ed2f3ef-853d-4aa6-bb19-0ecfd29ba204"/>
+      <field name="created_at" type="timestamp" uuid="1d47f12c-f90b-4ad3-9189-6035e3fab1d1"/>
+      <field name="updated_at" type="timestamp" uuid="f6340524-8983-493e-8868-9c057e8b0363"/>
+      <field name="Name" type="string" required="true" unique="true" uuid="214f5faf-0540-4c5d-ab5d-943778027d83"/>
+      <field name="Website" type="string" uuid="70b544fd-1764-49df-bb77-12fd08426dbc"/>
+      <field name="Github" type="string" uuid="fdfc97b0-e9f1-4ea5-9b19-a461b4343ecf"/>
+      <field name="Description" type="longText" uuid="d030f602-bfa3-4bfa-8976-1d45a03b05d3"/>
+    </entity>
+    <entity name="\App\Models\Solutions" local-name="Solutions" namespace="\App\Models" description="All Laravel Packages and Solutions" uuid="6b0fafaa-82fe-4557-b068-bfa1a20a6440">
+      <field name="id" type="bigInteger" required="true" unique="true" primary="true" unsigned="true" auto-increment="true" uuid="14b224d8-e97f-4508-b210-59734de62809"/>
+      <field name="created_at" type="timestamp" uuid="1ed6d6ea-9a47-4c6a-944e-ff23e5e993f4"/>
+      <field name="updated_at" type="timestamp" uuid="5847d08d-813d-4261-8b59-ab54b8120f0f"/>
+      <field name="Name" type="string" required="true" uuid="994bd328-f643-474e-b869-30c086e55845"/>
+      <field name="Github" type="string" uuid="732dfb8e-8686-4109-b371-2f431000fe33"/>
+      <field name="Website" type="string" uuid="e6cfa679-1592-40db-808a-303eeb8a0671"/>
+    </entity>
+  </module>
+  <visual-data>
+    <entity uuid="6b0fafaa-82fe-4557-b068-bfa1a20a6440" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="14" position-y="18" size-x="0" size-x2="124" size-y="0" size-y2="101"/>
+    <entity uuid="73bf013e-ced1-478e-a6fa-c20ee9368a5e" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="174" position-y="18" size-x="0" size-x2="124" size-y="0" size-y2="115"/>
+    <module uuid="241fa78d-83f5-4072-98fa-5b3ddec048c7" bg-color="#FEFCE8" position-x="61" position-y="72" size-x="11" size-x2="482" size-y="22" size-y2="191"/>
+    <project uuid="ae2edcc2-e784-4449-a0e0-b84a2e43ef2c" size-x="0" size-x2="721" size-y="0" size-y2="524"/>
+  </visual-data>
+</skipper>
