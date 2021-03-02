@@ -16,11 +16,16 @@ $ghOrganization = $_GET['orga'];
 $ghRepository = $_GET['repo'];
 $ghApiUrl = $ghApiBaseUrl . $ghOrganization . "/" . $ghRepository;
 
+$composerJsonDependencies = array("require", "require-dev", "replace", "provide", "conflict", "suggest");
+$packageJsonDependencies = array("dependencies", "devDependencies", "peerDependencies");
+
 $ghResult = CallAPI("GET", $ghApiUrl);
 
 $ghResultJson = json_decode($ghResult, true);
 
 // Github values
+$name = $ghResultJson['name'];
+$full_name = $ghResultJson['full_name'];
 $stars = $ghResultJson['stargazers_count'];
 $created = $ghResultJson['created_at'];
 $updated = $ghResultJson['updated_at'];
@@ -46,20 +51,49 @@ $ghRepoBase = $ghRawUrl . $ghOrganization . "/" . $ghRepository . "/" . $ghResul
 // echo '<a href="' . $ghRepoBase . '/composer.json" target="_blank">composer.json</a>';
 // echo '<a href="' . $ghRepoBase . '/package.json" target="_blank">package.json</a>';
 
-$composerFile = file_get_contents($ghRepoBase . '/composer.json');
+$composerFile = @file_get_contents($ghRepoBase . '/composer.json');
+$packageFile = @file_get_contents($ghRepoBase . '/package.json');
+
+/* This can be much better with Laravel, skipping ...
+if (false !== ($data = file_get_contents("http://www.google.com"))) {
+  $error = error_get_last();
+  echo "HTTP request failed. Error was: " . $error['message'];
+} else {
+  echo "Everything went better than expected";
+}
+*/
 
 // echo $composerFile;
 
 $composerFileJson = json_decode($composerFile, true);
+$packageFileJson = json_decode($packageFile, true);
+
+foreach ($composerJsonDependencies As $dependencyGroup) {
+  
+  if (!empty($composerFileJson[$dependencyGroup])) {
+    // in_array("laravel/framework", $composerFileJson[$dependencyGroup]);
+    // print_r($composerFileJson[$dependencyGroup]);
+
+    $checkfor = 'illuminate/console';
+
+    if (array_key_exists($checkfor, $composerFileJson[$dependencyGroup])) {
+      echo "Laravel Version " . $composerFileJson[$dependencyGroup][$checkfor] . " found in " . $dependencyGroup . "<br>";
+    
+    
+    } else {
+      echo "NO Laravel found in " . $dependencyGroup . "<br>";
+    }
+
+
+  } else {
+    echo $dependencyGroup . " is empty<br>";
+  }
+}
+
+// echo in_array("laravel/framework", $composerFileJson);
 
 // echo $composerFileJson['name'];
 // print_r($composerFileJson['require']);
-
-foreach($composerFileJson['require'] as $requierement => $version) {
-    
-//    echo $requierement . " in version " . $version;
-
-}
 
 /*
 
@@ -262,7 +296,7 @@ function CallAPI($method, $url, $data = false)
 
     <div>
     <h3 class="text-lg leading-6 font-medium text-gray-900">
-        Last 30 days
+        <?php echo $full_name ?>
     </h3>
     <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
         <div class="bg-white overflow-hidden shadow rounded-lg">
@@ -299,6 +333,108 @@ function CallAPI($method, $url, $data = false)
         </div>
     </dl>
     </div>
+
+    <h2 class="mt-4 text-xl leading-6 font-medium text-gray-900">Composer <span><a href="<?php echo $ghRepoBase . '/composer.json' ?>">(JSON)</a></span></h2>
+
+    <?php
+
+    foreach ($composerJsonDependencies As $dependencyGroup) {
+        if (!empty($composerFileJson[$dependencyGroup])) {
+
+
+          echo '<h3 class="mt-2 text-lg leading-6 font-medium text-gray-900">' . $dependencyGroup . '</h3>
+
+          <div class="mt-5 flex flex-col">
+            <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+              <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                  <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                      <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Package
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Version
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">';
+                   
+                    foreach($composerFileJson[$dependencyGroup] as $requirement => $version) {
+                    
+                      echo '<tr>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        ' . $requirement . '
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        ' . $version . '
+                      </td>
+                    </tr>';
+  
+                  }
+  
+                  echo '                </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>';
+  
+        }
+      }
+      ?>
+
+<h2 class="mt-4 text-xl leading-6 font-medium text-gray-900">NPM Packages <span><a href="<?php echo $ghRepoBase . '/package.json' ?>">(JSON)</a></span></h2>
+
+<?php
+
+foreach ($packageJsonDependencies As $dependencyGroup) {
+    if (!empty($packageFileJson[$dependencyGroup])) {
+
+
+      echo '<h3 class="mt-2 text-lg leading-6 font-medium text-gray-900">' . $dependencyGroup . '</h3>
+
+      <div class="mt-5 flex flex-col">
+        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Package
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Version
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">';
+               
+                foreach($packageFileJson[$dependencyGroup] as $requirement => $version) {
+                
+                  echo '<tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    ' . $requirement . '
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    ' . $version . '
+                  </td>
+                </tr>';
+
+              }
+
+              echo '                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>';
+
+    }
+  }
+  ?>
 
     </div>
   </main>
