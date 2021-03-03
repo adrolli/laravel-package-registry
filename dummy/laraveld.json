@@ -1,0 +1,42 @@
+{
+    "name": "Laravel Permission",
+    "type": "laravel_package",
+    "description": "The Laravel Permission package from Spatie.",
+    "images": {
+        "banner": "https://banner.io/test.jpeg",
+        "avatar": "https://avatar.io/test.png",
+        "signet": "https://signet.io/test.svg"
+    },
+    "developer": "Alf Drollinger",
+    "organisation": "DCN",    
+    "tags": [
+        "framework",
+        "laravel",
+        "permission",
+        "login",
+        "auth",
+        "authentication"
+    ],
+    "license": "MIT",
+    "links": {
+        "website": "https://web.io",
+        "source": "https://git.io",
+        "demo": "https://demo.io",
+        "issues": "https://issues.io",
+        "developer": "https://phpdev.io",
+        "organisation": "https://agency.io",
+        "license": "https://licence.io",
+        "contact": "dev@dev.com"
+    },
+    "showcase": [
+        "https://www.customerproject.com"
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "fideloper/proxy": "^4.4",
+        "fruitcake/laravel-cors": "^2.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "laravel/framework": "^8.12",
+        "laravel/tinker": "^2.5"
+    }
+}

@@ -1,6 +1,50 @@
-# Click-Dummy
+# Todo
 
-This is a dummy.
+- How to deal with versions? Branches ...
+- Show Features:
+  - Routes
+  - Controllers
+  - Views
+  - Configuration
+  - Migrations
+  - Seedings
+  - Docker
+- Package uses CSS:
+  - Tailwind
+  - Bootstrap
+  - ...
+- Package uses JS:
+  - React
+  - Vue
+  - Alpine
+  - Livewire
+  - jQuery
+  - jQuery UI
+  - Axios
+- Docker(-Dependencies)
+
+
+## How to discover packages
+
+You may define the provider in the extra section of your package's composer.json
+https://laravel.com/docs/8.x/packages
+
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JeroenG\\Packager\\PackagerServiceProvider"
+            ]
+        }
+    }
+
+        "extra": {
+        "laravel": {
+            "providers": [
+                "Spatie\\MediaLibrary\\MediaLibraryServiceProvider"
+            ]
+        }
+    },
 
 ## Fast checks
 
@@ -8,7 +52,7 @@ This is a dummy.
 - http://localhost:3000/dummy/github-test.php?orga=barryvdh&repo=laravel-debugbar
 - http://localhost:3000/dummy/github-test.php?orga=laravel&repo=laravel
 - http://localhost:3000/dummy/github-test.php?orga=laravel&repo=framework
-- http://localhost:3000/dummy/github-test.php?orga=flarum&repo=flarum -> illuminate in 2nd row of deps
+- http://localhost:3000/dummy/github-test.php?orga=flarum&repo=flarum -> illuminate in 2nd row of deps, no package
 
 
 ## The problem
@@ -29,8 +73,10 @@ The possible solution: Packages need to be registered and fall into following ca
 
 How to find a package? 
 - Dependency on laravel/laravel, laravel/framework or illuminate/* (see spatie/laravel-medialibrary or barryvdh/laravel-debugbar) 
-- Tag laravel (https://github.com/topics/laravel, but the first one fails, is a competitor in Golang)
+- Tag laravel (https://github.com/topics/laravel, but the first one fails, is a competitor in Golang) - see https://api.github.com/repos/laravel/framework/topics
 - Is a PHP package (means works with composer)
+
+YES! Extra-Section of composer.json
 
 Make research more comftable
 - Link to Github etc.

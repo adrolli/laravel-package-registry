@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<skipper version="3.2.31.1730" mvc="Laravel" orm="Laravel" name="Laravel-package-registry" uuid="ba657e91-1f33-4227-b102-c0a1ff0fae54">
+  <orm-attributes>
+    <attribute name="migrations-path">database/migrations</attribute>
+  </orm-attributes>
+  <module name="\Application module" local-name="Application module" namespace="\App\Models" local-namespace="App\Models" export-format="Laravel" export-path="." uuid="b1dd9d9c-cb35-4051-8bfe-61ce48986c94">
+    <entity name="\App\Models\packages" local-name="packages" namespace="\App\Models" uuid="c7745ba1-fd44-44a0-bbd8-0dde78aa5137">
+      <field name="id" type="bigInteger" required="true" unique="true" primary="true" unsigned="true" auto-increment="true" uuid="f8e1a507-00db-49c2-8002-27e26debf395"/>
+      <field name="name" type="string" uuid="81dd3016-0107-486a-870a-4796d7f04f60"/>
+      <field name="full_name" type="string" uuid="5087b81a-b4f2-41c7-8af4-2317e61ab26a"/>
+      <field name="github_stargazers" type="bigInteger" uuid="1f94d908-881b-4feb-a3e8-6846130cafb7"/>
+      <field name="github_forks" type="bigInteger" uuid="d1266343-1904-4ad6-8a2d-5e060dc8bf0a"/>
+      <field name="github_subscribers" type="bigInteger" uuid="d1e1959f-899f-4635-8051-8e31976c7eee"/>
+      <field name="github_network" type="bigInteger" uuid="9c32f198-db02-4791-901b-796d79e80bba"/>
+      <field name="homepage_url" type="string" uuid="9d4e61fc-67a8-485e-a7bf-1060d69556ba"/>
+      <field name="github_url" type="string" uuid="010c5b08-28d7-4d42-bac2-c8e8458ae28b"/>
+      <field name="github_api_url" type="string" uuid="bc2ca0b2-ef53-426c-8d56-5f2ca7d3c0b9"/>
+      <field name="description" type="longText" uuid="13640202-46f4-49c9-abde-b2375263d3aa"/>
+      <field name="is_fork" type="boolean" uuid="ae8423c4-6498-456d-9426-a3c4d54fd5ef"/>
+      <field name="updated_at" type="timestamp" uuid="9bf0be33-fea1-4bda-ac93-b93d6c9e7dd3"/>
+      <field name="created_at" type="timestamp" uuid="e55f0aa5-6547-4314-8d03-0fe3c0a06d5e"/>
+      <field name="deleted" type="boolean" uuid="4add18e1-cdad-478e-8423-fc7b5ed56d5a"/>
+      <field name="deleted_at" type="timestamp" uuid="3fd3a64e-0d50-44d6-93ae-0c4ade10a103"/>
+    </entity>
+    <entity name="\App\Models\categories" local-name="categories" namespace="\App\Models" uuid="e86ab324-4415-448d-872f-b0f47d919148">
+      <field name="id" type="bigInteger" required="true" unique="true" primary="true" unsigned="true" auto-increment="true" uuid="aa0ffe7c-ab83-41ed-9a59-f5372419dd16"/>
+      <field name="category_title" type="string" uuid="259ad805-b9ac-402e-b0b2-a87029c12dc4"/>
+      <field name="created_at" type="timestamp" uuid="20d13909-35d2-48ad-97b4-9e8e20487a33"/>
+      <field name="updated_at" type="timestamp" uuid="39e2e1f9-f292-43e7-94a0-40ad75c08431"/>
+    </entity>
+    <entity name="\App\Models\tags" local-name="tags" namespace="\App\Models" uuid="d378fd94-ba7c-41b0-ac40-67f5f4162fb3">
+      <field name="id" type="bigInteger" required="true" unique="true" primary="true" unsigned="true" auto-increment="true" uuid="5b1aff8f-0bea-4846-a6a7-a27e8da1e776"/>
+      <field name="created_at" type="timestamp" uuid="ec873fbf-e277-47a1-a6f1-2432793ea605"/>
+      <field name="updated_at" type="timestamp" uuid="429284ff-25c2-4c5f-8ba9-723d714f515e"/>
+    </entity>
+    <entity name="\App\Models\vendors" local-name="vendors" namespace="\App\Models" uuid="ba6d4d35-c50d-4c77-bb9a-335bca1040e9">
+      <field name="id" type="bigInteger" required="true" unique="true" primary="true" unsigned="true" auto-increment="true" uuid="02920572-19f3-4674-89eb-3d993674bc54"/>
+      <field name="created_at" type="timestamp" uuid="68adb677-b4a4-40a6-9d1b-4c8fa0fb31f7"/>
+      <field name="updated_at" type="timestamp" uuid="e37d3d57-1985-4976-b49c-454eb4a29487"/>
+    </entity>
+  </module>
+  <visual-data>
+    <entity uuid="ba6d4d35-c50d-4c77-bb9a-335bca1040e9" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="361" position-y="200" size-x="0" size-x2="124" size-y="0" size-y2="59"/>
+    <entity uuid="c7745ba1-fd44-44a0-bbd8-0dde78aa5137" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="9" position-y="18" size-x="0" size-x2="124" size-y="0" size-y2="59"/>
+    <entity uuid="d378fd94-ba7c-41b0-ac40-67f5f4162fb3" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="463" position-y="24" size-x="0" size-x2="124" size-y="0" size-y2="59"/>
+    <entity uuid="e86ab324-4415-448d-872f-b0f47d919148" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="251" position-y="23" size-x="0" size-x2="124" size-y="0" size-y2="73"/>
+    <module uuid="b1dd9d9c-cb35-4051-8bfe-61ce48986c94" bg-color="#FEFCE8" position-x="61" position-y="72" size-x="11" size-x2="771" size-y="22" size-y2="452"/>
+    <project uuid="ba657e91-1f33-4227-b102-c0a1ff0fae54" size-x="0" size-x2="1143" size-y="0" size-y2="650"/>
+  </visual-data>
+</skipper>
