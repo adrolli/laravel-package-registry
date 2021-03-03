@@ -29,7 +29,14 @@ Change .env DB_HOST to mysql, sail down -v, sail up, sail shell and php artisan 
 
 See https://jetstream.laravel.com/
 
-## Step 3: Templating
+## Step 3: Prepare to use Skipper
+
+Connect MySQL Workbench, reverse engineer and save the model. Import the model to Skipper and save the Skipper-file into the project.
+
+Now there are six entities in the Skipper "Application module". You're prepared to scaffold ...
+
+
+## Step 4: Templating
 
 Generelle Infos zu Tailwind unter https://tailwindcss.com/docs/guides/laravel und https://laravel.com/docs/8.x/mix.
 

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <skipper version="3.2.31.1730" mvc="Laravel" orm="Laravel" name="Laravel-package-registry" uuid="b541181b-21a9-4b07-a372-a83da027137b">
-  <module name="\Name of the project" local-name="Name of the project" namespace="\App\Models" local-namespace="App\Models" export-format="Laravel" export-path="." uuid="c3654a2a-e0e8-49d6-a156-07e4276cd3ce">
+  <module name="\Application module" local-name="Application module" namespace="\App\Models" local-namespace="App\Models" export-format="Laravel" export-path="." uuid="c3654a2a-e0e8-49d6-a156-07e4276cd3ce">
     <entity name="\App\Models\failed_job" local-name="failed_job" namespace="\App\Models" uuid="{460CD855-8FB9-4879-9D22-5BAADEFA1CDD}">
       <field name="id" type="bigInteger" required="true" primary="true" auto-increment="true" uuid="61366893-947f-4139-a84f-cb73ce154795">
         <orm-attributes>
@@ -120,6 +120,14 @@
       <orm-attributes>
         <attribute name="table">users</attribute>
       </orm-attributes>
+    </entity>
+    <entity name="\App\Models\category" local-name="category" namespace="\App\Models" uuid="b399a5b5-00f1-4cfe-9c66-1679669ec4a9">
+      <field name="id" type="bigInteger" required="true" unique="true" primary="true" unsigned="true" auto-increment="true" uuid="93a21c88-cfa3-46e7-85a4-e3ccf45e81ef"/>
+      <field name="title" type="string" uuid="d1120c41-6004-49d5-99d5-3843a9e718d4"/>
+      <field name="description" type="longText" uuid="62a02f84-e751-4ab1-8fee-95fd44595680"/>
+      <field name="slug" type="string" uuid="31c03a21-eea7-4619-8e81-b6d628abb235"/>
+      <field name="created_at" type="timestamp" uuid="d414e630-c7e6-4117-935d-eaa5dc068aa6"/>
+      <field name="updated_at" type="timestamp" uuid="9360a06f-4efb-4cea-b76f-5972a83ff8f3"/>
     </entity>
     <orm-attributes>
       <attribute name="migrations-path">database/migrations</attribute>
@@ -437,12 +445,13 @@
     </migrations>
   </module>
   <visual-data>
-    <entity uuid="{082AB8B8-1E7D-4299-9A68-9205946C4ECF}" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="136" position-y="71"/>
-    <entity uuid="{17B015BA-0467-499E-9503-2D6466D255B7}" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="125" position-y="508"/>
-    <entity uuid="{1C76DEC5-2A23-4114-A204-1E587A710DC6}" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="386" position-y="337"/>
-    <entity uuid="{240FD8B7-7E27-48AC-BE94-901034C4E615}" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="394" position-y="75"/>
-    <entity uuid="{42A714AB-37EF-497B-A052-1BD712DE626A}" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="595" position-y="79"/>
-    <entity uuid="{460CD855-8FB9-4879-9D22-5BAADEFA1CDD}" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="633" position-y="494"/>
+    <entity uuid="b399a5b5-00f1-4cfe-9c66-1679669ec4a9" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="45" position-y="453" size-x="0" size-x2="124" size-y="0" size-y2="101"/>
+    <entity uuid="{082AB8B8-1E7D-4299-9A68-9205946C4ECF}" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="35" position-y="50" size-x="0" size-x2="167" size-y="0" size-y2="185"/>
+    <entity uuid="{17B015BA-0467-499E-9503-2D6466D255B7}" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="728" position-y="63" size-x="0" size-x2="116" size-y="0" size-y2="59"/>
+    <entity uuid="{1C76DEC5-2A23-4114-A204-1E587A710DC6}" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="246" position-y="175" size-x="0" size-x2="122" size-y="0" size-y2="59"/>
+    <entity uuid="{240FD8B7-7E27-48AC-BE94-901034C4E615}" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="244" position-y="53" size-x="0" size-x2="118" size-y="0" size-y2="101"/>
+    <entity uuid="{42A714AB-37EF-497B-A052-1BD712DE626A}" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="404" position-y="56" size-x="0" size-x2="142" size-y="0" size-y2="143"/>
+    <entity uuid="{460CD855-8FB9-4879-9D22-5BAADEFA1CDD}" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="578" position-y="58" size-x="0" size-x2="114" size-y="0" size-y2="115"/>
     <module uuid="c3654a2a-e0e8-49d6-a156-07e4276cd3ce" bg-color="#FEFCE8" position-x="50" position-y="50" size-x="0" size-x2="867" size-y="0" size-y2="729"/>
     <project uuid="b541181b-21a9-4b07-a372-a83da027137b" size-x="0" size-x2="967" size-y="0" size-y2="829"/>
   </visual-data>
