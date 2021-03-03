@@ -59,3 +59,8 @@ See https://tailwindcss.com/docs/preflight and https://tailwindcss.com/docs/addi
 
 Partials wie Header und Footer
 Mit einfachen Komponenten wie dem TailwindUI Header ist ganz schnell eine funktionierende UI vorhanden. Das freie Beispiel in welcome.blade.php kopiert und mit entsprechenden Blade Directives für Login, Register und Dashboard ausgestattet ergibt schon eine klickbare Anwendung mit Login.
+
+### Use DB ...
+
+Categories
+Then proceed to packages...
