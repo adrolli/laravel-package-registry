@@ -12,7 +12,53 @@
     <orm-attributes>
       <attribute name="migrations-path">database/migrations</attribute>
     </orm-attributes>
-    <migrations version="1.0"/>
+    <migrations version="1.0">
+      <revision uuid="fbf9a83f-c277-4714-af8c-86b1784e5317" date="2021-03-03 15:25:28.106217" exportable="true">
+        <element action="add" uuid="c3654a2a-e0e8-49d6-a156-07e4276cd3ce" type="module">
+          <property name="export-format" value="Laravel"/>
+          <property name="export-path" value="."/>
+          <property name="local-name" value="Application module"/>
+          <property name="local-namespace" value="App\Models"/>
+          <property name="migrations-path" value="database/migrations"/>
+          <property name="name" value="\Application module"/>
+          <property name="namespace" value="\App\Models"/>
+        </element>
+        <element action="add" uuid="b399a5b5-00f1-4cfe-9c66-1679669ec4a9" parent-uuid="c3654a2a-e0e8-49d6-a156-07e4276cd3ce" type="entity">
+          <property name="local-name" value="category"/>
+          <property name="name" value="\App\Models\category"/>
+          <property name="namespace" value="\App\Models"/>
+        </element>
+        <element action="add" uuid="93a21c88-cfa3-46e7-85a4-e3ccf45e81ef" parent-uuid="b399a5b5-00f1-4cfe-9c66-1679669ec4a9" type="field">
+          <property name="auto-increment" value="true"/>
+          <property name="name" value="id"/>
+          <property name="primary" value="true"/>
+          <property name="required" value="true"/>
+          <property name="type" value="bigInteger"/>
+          <property name="unique" value="true"/>
+          <property name="unsigned" value="true"/>
+        </element>
+        <element action="add" uuid="d1120c41-6004-49d5-99d5-3843a9e718d4" parent-uuid="b399a5b5-00f1-4cfe-9c66-1679669ec4a9" sibling-uuid="93a21c88-cfa3-46e7-85a4-e3ccf45e81ef" type="field">
+          <property name="name" value="title"/>
+          <property name="type" value="string"/>
+        </element>
+        <element action="add" uuid="62a02f84-e751-4ab1-8fee-95fd44595680" parent-uuid="b399a5b5-00f1-4cfe-9c66-1679669ec4a9" sibling-uuid="d1120c41-6004-49d5-99d5-3843a9e718d4" type="field">
+          <property name="name" value="description"/>
+          <property name="type" value="longText"/>
+        </element>
+        <element action="add" uuid="31c03a21-eea7-4619-8e81-b6d628abb235" parent-uuid="b399a5b5-00f1-4cfe-9c66-1679669ec4a9" sibling-uuid="62a02f84-e751-4ab1-8fee-95fd44595680" type="field">
+          <property name="name" value="slug"/>
+          <property name="type" value="string"/>
+        </element>
+        <element action="add" uuid="d414e630-c7e6-4117-935d-eaa5dc068aa6" parent-uuid="b399a5b5-00f1-4cfe-9c66-1679669ec4a9" sibling-uuid="31c03a21-eea7-4619-8e81-b6d628abb235" type="field">
+          <property name="name" value="created_at"/>
+          <property name="type" value="timestamp"/>
+        </element>
+        <element action="add" uuid="9360a06f-4efb-4cea-b76f-5972a83ff8f3" parent-uuid="b399a5b5-00f1-4cfe-9c66-1679669ec4a9" sibling-uuid="d414e630-c7e6-4117-935d-eaa5dc068aa6" type="field">
+          <property name="name" value="updated_at"/>
+          <property name="type" value="timestamp"/>
+        </element>
+      </revision>
+    </migrations>
   </module>
   <module name="\Laravel core" local-name="Laravel core" namespace="\App\Models" local-namespace="App\Models" export-format="Laravel" export-path="." uuid="479aa5a0-6907-4462-907a-d12c019676f0">
     <entity name="\App\Models\failed_job" local-name="failed_job" namespace="\App\Models" uuid="ea3ce824-f49c-4d0c-9d74-ac7306d16630">
@@ -117,7 +163,270 @@
       <attribute name="migrations-disabled">true</attribute>
       <attribute name="models-disabled">true</attribute>
     </orm-attributes>
-    <migrations version="1.0"/>
+    <migrations version="1.0">
+      <revision uuid="fbf9a83f-c277-4714-af8c-86b1784e5317" date="2021-03-03 15:25:28.106217" exportable="true">
+        <element action="add" uuid="479aa5a0-6907-4462-907a-d12c019676f0" type="module">
+          <property name="export-format" value="Laravel"/>
+          <property name="export-path" value="."/>
+          <property name="local-name" value="Laravel core"/>
+          <property name="local-namespace" value="App\Models"/>
+          <property name="migrations-disabled" value="true"/>
+          <property name="models-disabled" value="true"/>
+          <property name="name" value="\Laravel core"/>
+          <property name="namespace" value="\App\Models"/>
+        </element>
+        <element action="add" uuid="ea3ce824-f49c-4d0c-9d74-ac7306d16630" parent-uuid="479aa5a0-6907-4462-907a-d12c019676f0" type="entity">
+          <property name="local-name" value="failed_job"/>
+          <property name="name" value="\App\Models\failed_job"/>
+          <property name="namespace" value="\App\Models"/>
+          <property name="table" value="failed_jobs"/>
+        </element>
+        <element action="add" uuid="795dc33f-8887-48b9-a4b6-9f3fee375ccd" parent-uuid="479aa5a0-6907-4462-907a-d12c019676f0" type="entity">
+          <property name="local-name" value="migration"/>
+          <property name="name" value="\App\Models\migration"/>
+          <property name="namespace" value="\App\Models"/>
+          <property name="table" value="migrations"/>
+        </element>
+        <element action="add" uuid="82a6bdd6-4142-4762-8491-0a65b1f27a5a" parent-uuid="479aa5a0-6907-4462-907a-d12c019676f0" type="entity">
+          <property name="local-name" value="session"/>
+          <property name="name" value="\App\Models\session"/>
+          <property name="namespace" value="\App\Models"/>
+          <property name="table" value="sessions"/>
+        </element>
+        <element action="add" uuid="9f0a3ea8-b40f-4901-aebc-d2dc1da6c88a" parent-uuid="479aa5a0-6907-4462-907a-d12c019676f0" type="entity">
+          <property name="local-name" value="personal_access_token"/>
+          <property name="name" value="\App\Models\personal_access_token"/>
+          <property name="namespace" value="\App\Models"/>
+          <property name="table" value="personal_access_tokens"/>
+        </element>
+        <element action="add" uuid="6fe2a0c3-6532-4135-aa86-da849bcc9213" parent-uuid="479aa5a0-6907-4462-907a-d12c019676f0" type="entity">
+          <property name="local-name" value="password_reset"/>
+          <property name="name" value="\App\Models\password_reset"/>
+          <property name="namespace" value="\App\Models"/>
+          <property name="table" value="password_resets"/>
+        </element>
+        <element action="add" uuid="8fbb5d37-da98-4f94-a3ed-6a8d65295dee" parent-uuid="479aa5a0-6907-4462-907a-d12c019676f0" type="entity">
+          <property name="local-name" value="user"/>
+          <property name="name" value="\App\Models\user"/>
+          <property name="namespace" value="\App\Models"/>
+          <property name="table" value="users"/>
+        </element>
+        <element action="add" uuid="9e414ae7-8ab6-4048-b171-e64e1fd81a09" parent-uuid="ea3ce824-f49c-4d0c-9d74-ac7306d16630" type="field">
+          <property name="auto-increment" value="true"/>
+          <property name="name" value="id"/>
+          <property name="primary" value="true"/>
+          <property name="required" value="true"/>
+          <property name="type" value="bigInteger"/>
+          <property name="unsigned" value="true"/>
+        </element>
+        <element action="add" uuid="f0d2edab-cbd1-461b-aba4-11a418cd28e6" parent-uuid="ea3ce824-f49c-4d0c-9d74-ac7306d16630" sibling-uuid="9e414ae7-8ab6-4048-b171-e64e1fd81a09" type="field">
+          <property name="name" value="uuid"/>
+          <property name="required" value="true"/>
+          <property name="size" value="255"/>
+          <property name="type" value="string"/>
+        </element>
+        <element action="add" uuid="c0d112a5-3951-494a-b6e0-204d45330a8f" parent-uuid="ea3ce824-f49c-4d0c-9d74-ac7306d16630" sibling-uuid="f0d2edab-cbd1-461b-aba4-11a418cd28e6" type="field">
+          <property name="name" value="connection"/>
+          <property name="required" value="true"/>
+          <property name="type" value="text"/>
+        </element>
+        <element action="add" uuid="4e42ddd5-0636-44a0-b6ef-7486a33ccc4c" parent-uuid="ea3ce824-f49c-4d0c-9d74-ac7306d16630" sibling-uuid="c0d112a5-3951-494a-b6e0-204d45330a8f" type="field">
+          <property name="name" value="queue"/>
+          <property name="required" value="true"/>
+          <property name="type" value="text"/>
+        </element>
+        <element action="add" uuid="25893285-6fc0-43a4-a3d3-d052d9133d6e" parent-uuid="ea3ce824-f49c-4d0c-9d74-ac7306d16630" sibling-uuid="4e42ddd5-0636-44a0-b6ef-7486a33ccc4c" type="field">
+          <property name="name" value="payload"/>
+          <property name="required" value="true"/>
+          <property name="type" value="longText"/>
+        </element>
+        <element action="add" uuid="cd85d27b-84a6-485b-b5f4-ccb9c65b4395" parent-uuid="ea3ce824-f49c-4d0c-9d74-ac7306d16630" sibling-uuid="25893285-6fc0-43a4-a3d3-d052d9133d6e" type="field">
+          <property name="name" value="exception"/>
+          <property name="required" value="true"/>
+          <property name="type" value="longText"/>
+        </element>
+        <element action="add" uuid="ad9d9346-022d-443b-a559-474766987661" parent-uuid="ea3ce824-f49c-4d0c-9d74-ac7306d16630" sibling-uuid="cd85d27b-84a6-485b-b5f4-ccb9c65b4395" type="field">
+          <property name="default" value="NOW()"/>
+          <property name="name" value="failed_at"/>
+          <property name="required" value="true"/>
+          <property name="type" value="timestamp"/>
+        </element>
+        <element action="add" uuid="740b7c4d-9a5b-4bc9-b99f-7c7f488d581a" parent-uuid="795dc33f-8887-48b9-a4b6-9f3fee375ccd" type="field">
+          <property name="auto-increment" value="true"/>
+          <property name="name" value="id"/>
+          <property name="primary" value="true"/>
+          <property name="required" value="true"/>
+          <property name="type" value="integer"/>
+          <property name="unsigned" value="true"/>
+        </element>
+        <element action="add" uuid="1970ddab-c4d7-4e2f-9533-87a30d894f58" parent-uuid="795dc33f-8887-48b9-a4b6-9f3fee375ccd" sibling-uuid="740b7c4d-9a5b-4bc9-b99f-7c7f488d581a" type="field">
+          <property name="name" value="migration"/>
+          <property name="required" value="true"/>
+          <property name="size" value="255"/>
+          <property name="type" value="string"/>
+        </element>
+        <element action="add" uuid="1ec00d08-f20a-4cc1-9d01-279c17301356" parent-uuid="795dc33f-8887-48b9-a4b6-9f3fee375ccd" sibling-uuid="1970ddab-c4d7-4e2f-9533-87a30d894f58" type="field">
+          <property name="name" value="batch"/>
+          <property name="required" value="true"/>
+          <property name="type" value="integer"/>
+        </element>
+        <element action="add" uuid="11584821-85ff-4313-aba2-e26fe88e3a63" parent-uuid="82a6bdd6-4142-4762-8491-0a65b1f27a5a" type="field">
+          <property name="name" value="id"/>
+          <property name="primary" value="true"/>
+          <property name="required" value="true"/>
+          <property name="size" value="255"/>
+          <property name="type" value="string"/>
+        </element>
+        <element action="add" uuid="7c8d1f84-e132-4506-8b7e-2ddd235aa937" parent-uuid="82a6bdd6-4142-4762-8491-0a65b1f27a5a" sibling-uuid="11584821-85ff-4313-aba2-e26fe88e3a63" type="field">
+          <property name="name" value="user_id"/>
+          <property name="type" value="bigInteger"/>
+          <property name="unsigned" value="true"/>
+        </element>
+        <element action="add" uuid="dc2783c7-6e51-4721-8dc4-df0f6a9f265e" parent-uuid="82a6bdd6-4142-4762-8491-0a65b1f27a5a" sibling-uuid="7c8d1f84-e132-4506-8b7e-2ddd235aa937" type="field">
+          <property name="name" value="ip_address"/>
+          <property name="size" value="45"/>
+          <property name="type" value="string"/>
+        </element>
+        <element action="add" uuid="56e01c28-5b8b-4f59-b346-eac14f34a440" parent-uuid="82a6bdd6-4142-4762-8491-0a65b1f27a5a" sibling-uuid="dc2783c7-6e51-4721-8dc4-df0f6a9f265e" type="field">
+          <property name="name" value="user_agent"/>
+          <property name="type" value="text"/>
+        </element>
+        <element action="add" uuid="29d517c2-0d21-4051-b833-76b1c8e98f33" parent-uuid="82a6bdd6-4142-4762-8491-0a65b1f27a5a" sibling-uuid="56e01c28-5b8b-4f59-b346-eac14f34a440" type="field">
+          <property name="name" value="payload"/>
+          <property name="required" value="true"/>
+          <property name="type" value="text"/>
+        </element>
+        <element action="add" uuid="6929214f-a940-4cf3-b059-0dd1ae9b7259" parent-uuid="82a6bdd6-4142-4762-8491-0a65b1f27a5a" sibling-uuid="29d517c2-0d21-4051-b833-76b1c8e98f33" type="field">
+          <property name="name" value="last_activity"/>
+          <property name="required" value="true"/>
+          <property name="type" value="integer"/>
+        </element>
+        <element action="add" uuid="d73c6965-2851-4820-808e-3e86dbd69d7b" parent-uuid="9f0a3ea8-b40f-4901-aebc-d2dc1da6c88a" type="field">
+          <property name="auto-increment" value="true"/>
+          <property name="name" value="id"/>
+          <property name="primary" value="true"/>
+          <property name="required" value="true"/>
+          <property name="type" value="bigInteger"/>
+          <property name="unsigned" value="true"/>
+        </element>
+        <element action="add" uuid="4c4cc01b-6ff6-4b5e-b6dc-ce5ca356e3be" parent-uuid="9f0a3ea8-b40f-4901-aebc-d2dc1da6c88a" sibling-uuid="d73c6965-2851-4820-808e-3e86dbd69d7b" type="field">
+          <property name="name" value="tokenable_type"/>
+          <property name="required" value="true"/>
+          <property name="size" value="255"/>
+          <property name="type" value="string"/>
+        </element>
+        <element action="add" uuid="7670ff6a-9c1d-4804-bbb0-791dcfbf2da9" parent-uuid="9f0a3ea8-b40f-4901-aebc-d2dc1da6c88a" sibling-uuid="4c4cc01b-6ff6-4b5e-b6dc-ce5ca356e3be" type="field">
+          <property name="name" value="tokenable_id"/>
+          <property name="required" value="true"/>
+          <property name="type" value="bigInteger"/>
+          <property name="unsigned" value="true"/>
+        </element>
+        <element action="add" uuid="b2ce10bc-1e49-43f4-8c5a-aaf3cddfd07e" parent-uuid="9f0a3ea8-b40f-4901-aebc-d2dc1da6c88a" sibling-uuid="7670ff6a-9c1d-4804-bbb0-791dcfbf2da9" type="field">
+          <property name="name" value="name"/>
+          <property name="required" value="true"/>
+          <property name="size" value="255"/>
+          <property name="type" value="string"/>
+        </element>
+        <element action="add" uuid="e898bfa1-13c6-42f4-a0d8-dabe5890c139" parent-uuid="9f0a3ea8-b40f-4901-aebc-d2dc1da6c88a" sibling-uuid="b2ce10bc-1e49-43f4-8c5a-aaf3cddfd07e" type="field">
+          <property name="name" value="token"/>
+          <property name="required" value="true"/>
+          <property name="size" value="64"/>
+          <property name="type" value="string"/>
+        </element>
+        <element action="add" uuid="dc7a4423-9823-471f-bb9b-45dfc02e0875" parent-uuid="9f0a3ea8-b40f-4901-aebc-d2dc1da6c88a" sibling-uuid="e898bfa1-13c6-42f4-a0d8-dabe5890c139" type="field">
+          <property name="name" value="abilities"/>
+          <property name="type" value="text"/>
+        </element>
+        <element action="add" uuid="2b5b7d93-f6c6-4772-9af2-7df21d09b2d9" parent-uuid="9f0a3ea8-b40f-4901-aebc-d2dc1da6c88a" sibling-uuid="dc7a4423-9823-471f-bb9b-45dfc02e0875" type="field">
+          <property name="name" value="last_used_at"/>
+          <property name="type" value="timestamp"/>
+        </element>
+        <element action="add" uuid="a3038d3d-261d-4f9f-beb3-0ae9cd169006" parent-uuid="9f0a3ea8-b40f-4901-aebc-d2dc1da6c88a" sibling-uuid="2b5b7d93-f6c6-4772-9af2-7df21d09b2d9" type="field">
+          <property name="name" value="created_at"/>
+          <property name="type" value="timestamp"/>
+        </element>
+        <element action="add" uuid="95a0139e-9b22-4daf-9498-1e2936c360a6" parent-uuid="9f0a3ea8-b40f-4901-aebc-d2dc1da6c88a" sibling-uuid="a3038d3d-261d-4f9f-beb3-0ae9cd169006" type="field">
+          <property name="name" value="updated_at"/>
+          <property name="type" value="timestamp"/>
+        </element>
+        <element action="add" uuid="93112fc7-beb0-4393-b437-e89128acb826" parent-uuid="6fe2a0c3-6532-4135-aa86-da849bcc9213" type="field">
+          <property name="name" value="email"/>
+          <property name="required" value="true"/>
+          <property name="size" value="255"/>
+          <property name="type" value="string"/>
+        </element>
+        <element action="add" uuid="5b413e8f-5a15-4058-84f3-11b67fd72495" parent-uuid="6fe2a0c3-6532-4135-aa86-da849bcc9213" sibling-uuid="93112fc7-beb0-4393-b437-e89128acb826" type="field">
+          <property name="name" value="token"/>
+          <property name="required" value="true"/>
+          <property name="size" value="255"/>
+          <property name="type" value="string"/>
+        </element>
+        <element action="add" uuid="638e45f7-a22e-4c64-8b41-702b1c09fcc2" parent-uuid="6fe2a0c3-6532-4135-aa86-da849bcc9213" sibling-uuid="5b413e8f-5a15-4058-84f3-11b67fd72495" type="field">
+          <property name="name" value="created_at"/>
+          <property name="type" value="timestamp"/>
+        </element>
+        <element action="add" uuid="335fab9f-025c-4110-be5b-6182ae8b0396" parent-uuid="8fbb5d37-da98-4f94-a3ed-6a8d65295dee" type="field">
+          <property name="auto-increment" value="true"/>
+          <property name="name" value="id"/>
+          <property name="primary" value="true"/>
+          <property name="required" value="true"/>
+          <property name="type" value="bigInteger"/>
+          <property name="unsigned" value="true"/>
+        </element>
+        <element action="add" uuid="23a27684-dd85-4fae-bc28-2e17ccadca6f" parent-uuid="8fbb5d37-da98-4f94-a3ed-6a8d65295dee" sibling-uuid="335fab9f-025c-4110-be5b-6182ae8b0396" type="field">
+          <property name="name" value="name"/>
+          <property name="required" value="true"/>
+          <property name="size" value="255"/>
+          <property name="type" value="string"/>
+        </element>
+        <element action="add" uuid="6076e351-d503-4dd7-b663-632ce03d9e64" parent-uuid="8fbb5d37-da98-4f94-a3ed-6a8d65295dee" sibling-uuid="23a27684-dd85-4fae-bc28-2e17ccadca6f" type="field">
+          <property name="name" value="email"/>
+          <property name="required" value="true"/>
+          <property name="size" value="255"/>
+          <property name="type" value="string"/>
+        </element>
+        <element action="add" uuid="82476b00-c5bb-4174-8c53-fdd5593dbbf7" parent-uuid="8fbb5d37-da98-4f94-a3ed-6a8d65295dee" sibling-uuid="6076e351-d503-4dd7-b663-632ce03d9e64" type="field">
+          <property name="name" value="email_verified_at"/>
+          <property name="type" value="timestamp"/>
+        </element>
+        <element action="add" uuid="1633af9a-75b0-4e8e-883b-357af0c80111" parent-uuid="8fbb5d37-da98-4f94-a3ed-6a8d65295dee" sibling-uuid="82476b00-c5bb-4174-8c53-fdd5593dbbf7" type="field">
+          <property name="name" value="password"/>
+          <property name="required" value="true"/>
+          <property name="size" value="255"/>
+          <property name="type" value="string"/>
+        </element>
+        <element action="add" uuid="4faf7120-3093-4147-8e0d-386425450400" parent-uuid="8fbb5d37-da98-4f94-a3ed-6a8d65295dee" sibling-uuid="1633af9a-75b0-4e8e-883b-357af0c80111" type="field">
+          <property name="name" value="two_factor_secret"/>
+          <property name="type" value="text"/>
+        </element>
+        <element action="add" uuid="26e70a61-a790-4ded-bf3e-3915418ea70a" parent-uuid="8fbb5d37-da98-4f94-a3ed-6a8d65295dee" sibling-uuid="4faf7120-3093-4147-8e0d-386425450400" type="field">
+          <property name="name" value="two_factor_recovery_codes"/>
+          <property name="type" value="text"/>
+        </element>
+        <element action="add" uuid="42250a35-16a4-4404-aba3-2dc4680dace8" parent-uuid="8fbb5d37-da98-4f94-a3ed-6a8d65295dee" sibling-uuid="26e70a61-a790-4ded-bf3e-3915418ea70a" type="field">
+          <property name="name" value="remember_token"/>
+          <property name="size" value="100"/>
+          <property name="type" value="string"/>
+        </element>
+        <element action="add" uuid="471aa7b2-a4ff-4ee4-a793-83530b07c4d8" parent-uuid="8fbb5d37-da98-4f94-a3ed-6a8d65295dee" sibling-uuid="42250a35-16a4-4404-aba3-2dc4680dace8" type="field">
+          <property name="name" value="current_team_id"/>
+          <property name="type" value="bigInteger"/>
+          <property name="unsigned" value="true"/>
+        </element>
+        <element action="add" uuid="a62e8f29-aebc-4923-8987-ac8d62ac5d94" parent-uuid="8fbb5d37-da98-4f94-a3ed-6a8d65295dee" sibling-uuid="471aa7b2-a4ff-4ee4-a793-83530b07c4d8" type="field">
+          <property name="name" value="profile_photo_path"/>
+          <property name="type" value="text"/>
+        </element>
+        <element action="add" uuid="366fd56d-daf3-4a27-9768-e441b8548864" parent-uuid="8fbb5d37-da98-4f94-a3ed-6a8d65295dee" sibling-uuid="a62e8f29-aebc-4923-8987-ac8d62ac5d94" type="field">
+          <property name="name" value="created_at"/>
+          <property name="type" value="timestamp"/>
+        </element>
+        <element action="add" uuid="69a42cbe-96b1-4091-a411-5e52847b034c" parent-uuid="8fbb5d37-da98-4f94-a3ed-6a8d65295dee" sibling-uuid="366fd56d-daf3-4a27-9768-e441b8548864" type="field">
+          <property name="name" value="updated_at"/>
+          <property name="type" value="timestamp"/>
+        </element>
+      </revision>
+    </migrations>
   </module>
   <visual-data>
     <entity uuid="6fe2a0c3-6532-4135-aa86-da849bcc9213" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="670" position-y="40" size-x="0" size-x2="122" size-y="0" size-y2="59"/>
