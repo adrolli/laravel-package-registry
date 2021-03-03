@@ -87,4 +87,6 @@ Auto-create news, package-updates and form the portal.
 
 ## Step 11: Launch
 
-...
+Test on [lpr.dcn.de](http://lpr.dcn.de/)
+
+See https://www.bugblog.de/bugs-vulnerabilities/laravel-bei-all-inkl-installieren/2020/01/13/ and https://all-inkl.com/wichtig/anleitungen/skripte/sonstiges/laravel/installation_564.html
