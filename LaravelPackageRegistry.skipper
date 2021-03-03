@@ -1,126 +1,6 @@
 <?xml version="1.0"?>
 <skipper version="3.2.31.1730" mvc="Laravel" orm="Laravel" name="Laravel-package-registry" uuid="b541181b-21a9-4b07-a372-a83da027137b">
   <module name="\Application module" local-name="Application module" namespace="\App\Models" local-namespace="App\Models" export-format="Laravel" export-path="." uuid="c3654a2a-e0e8-49d6-a156-07e4276cd3ce">
-    <entity name="\App\Models\failed_job" local-name="failed_job" namespace="\App\Models" uuid="{460CD855-8FB9-4879-9D22-5BAADEFA1CDD}">
-      <field name="id" type="bigInteger" required="true" primary="true" auto-increment="true" uuid="61366893-947f-4139-a84f-cb73ce154795">
-        <orm-attributes>
-          <attribute name="unsigned">true</attribute>
-        </orm-attributes>
-      </field>
-      <field name="uuid" type="string" size="255" required="true" uuid="0ebf12a5-0a6b-43e6-a659-2584016c82a1"/>
-      <field name="connection" type="text" required="true" uuid="86191cbb-a7ff-49db-8f5d-32f1010dda97"/>
-      <field name="queue" type="text" required="true" uuid="4aeeb566-5e91-40a5-bd90-9eb5a823a038"/>
-      <field name="payload" type="longText" required="true" uuid="57c0fa0a-f1e3-46d8-b3f1-191b3b1e9830"/>
-      <field name="exception" type="longText" required="true" uuid="fb47216c-feb8-40f1-9533-bb62d0998c0d"/>
-      <field name="failed_at" type="timestamp" default="NOW()" required="true" uuid="ac21c409-c2d5-4d24-9da6-8eae22d89c39"/>
-      <index name="failed_jobs_uuid_unique" unique="true" uuid="5e6ef8f6-0d94-45f6-876f-e5aa6eb63d8f">
-        <index-field name="uuid" uuid="e3a184cd-dcf0-46c2-9cdf-764049dff01e"/>
-      </index>
-      <orm-attributes>
-        <attribute name="table">failed_jobs</attribute>
-      </orm-attributes>
-    </entity>
-    <entity name="\App\Models\migration" local-name="migration" namespace="\App\Models" uuid="{17B015BA-0467-499E-9503-2D6466D255B7}">
-      <field name="id" type="integer" required="true" primary="true" auto-increment="true" uuid="57bf0844-cffa-453f-8f67-decd54e20999">
-        <orm-attributes>
-          <attribute name="unsigned">true</attribute>
-        </orm-attributes>
-      </field>
-      <field name="migration" type="string" size="255" required="true" uuid="000314f3-f7ba-4328-8723-6f07d53b2067"/>
-      <field name="batch" type="integer" required="true" uuid="06fa31f6-0786-4ba8-80b4-19daf2c2d7fa"/>
-      <orm-attributes>
-        <attribute name="table">migrations</attribute>
-      </orm-attributes>
-    </entity>
-    <entity name="\App\Models\password_reset" local-name="password_reset" namespace="\App\Models" uuid="{1C76DEC5-2A23-4114-A204-1E587A710DC6}">
-      <field name="email" type="string" size="255" required="true" uuid="9fda339e-c5c7-4f7b-95fd-2502891258fa"/>
-      <field name="token" type="string" size="255" required="true" uuid="1d73e6cd-61a2-46f8-a845-0d7c87ca936f"/>
-      <field name="created_at" type="timestamp" uuid="77ab0866-aeab-4967-925e-fced718706d3"/>
-      <index name="password_resets_email_index" uuid="321ec300-d3c0-4342-be68-a2649a5e13ba">
-        <index-field name="email" uuid="80ba38a4-9727-43e1-81f2-09c2c35d8d11"/>
-      </index>
-      <orm-attributes>
-        <attribute name="table">password_resets</attribute>
-      </orm-attributes>
-    </entity>
-    <entity name="\App\Models\personal_access_token" local-name="personal_access_token" namespace="\App\Models" uuid="{42A714AB-37EF-497B-A052-1BD712DE626A}">
-      <field name="id" type="bigInteger" required="true" primary="true" auto-increment="true" uuid="25d3acf1-ceb4-47d5-8d44-55f6de81eaeb">
-        <orm-attributes>
-          <attribute name="unsigned">true</attribute>
-        </orm-attributes>
-      </field>
-      <field name="tokenable_type" type="string" size="255" required="true" uuid="086414a7-4284-4ebd-9aff-455089e0d8f3"/>
-      <field name="tokenable_id" type="bigInteger" required="true" uuid="92288cd1-911d-4e8b-82e3-c205e8effd9f">
-        <orm-attributes>
-          <attribute name="unsigned">true</attribute>
-        </orm-attributes>
-      </field>
-      <field name="name" type="string" size="255" required="true" uuid="1b7fe571-f895-4cf8-91fd-429f07c4f834"/>
-      <field name="token" type="string" size="64" required="true" uuid="67cd5dcd-ff85-4145-8acf-5963650af10f"/>
-      <field name="abilities" type="text" uuid="a971a2cd-c386-47ad-a9a5-8d2e4b76d231"/>
-      <field name="last_used_at" type="timestamp" uuid="03b02b3e-91a6-4d78-b9e8-02ac60825458"/>
-      <field name="created_at" type="timestamp" uuid="e0b99f48-2d6d-4af5-b319-13d99e5b9a6c"/>
-      <field name="updated_at" type="timestamp" uuid="402fb397-a8fc-411b-9f46-244f897746cb"/>
-      <index name="personal_access_tokens_token_unique" unique="true" uuid="38c31640-fb5a-4c4d-a408-68fd2ef2c39f">
-        <index-field name="token" uuid="66da4597-1032-4152-b22e-657db797462e"/>
-      </index>
-      <index name="personal_access_tokens_tokenable_type_tokenable_id_index" uuid="44dbe76c-6e32-4383-8a90-f063ab734c4a">
-        <index-field name="tokenable_type" uuid="cef1870c-4c04-4f5a-9235-3321271f8834"/>
-        <index-field name="tokenable_id" uuid="d7e92315-77e4-4a41-b11b-f43450e0d86b"/>
-      </index>
-      <orm-attributes>
-        <attribute name="table">personal_access_tokens</attribute>
-      </orm-attributes>
-    </entity>
-    <entity name="\App\Models\session" local-name="session" namespace="\App\Models" uuid="{240FD8B7-7E27-48AC-BE94-901034C4E615}">
-      <field name="id" type="string" size="255" required="true" primary="true" uuid="e58a82e9-c997-471e-a04e-f782a053fa42"/>
-      <field name="user_id" type="bigInteger" uuid="9588b45d-da2b-4cf1-958d-0ae5b44fb385">
-        <orm-attributes>
-          <attribute name="unsigned">true</attribute>
-        </orm-attributes>
-      </field>
-      <field name="ip_address" type="string" size="45" uuid="38c96211-f7af-449c-be8f-bf26114b47e9"/>
-      <field name="user_agent" type="text" uuid="6ece6b2a-145c-43d5-b40b-ae13c7970aad"/>
-      <field name="payload" type="text" required="true" uuid="af973f27-873a-4b17-9ae8-c10cbacff1a3"/>
-      <field name="last_activity" type="integer" required="true" uuid="964f2e5f-04e9-4fe8-aebf-b892cff8219d"/>
-      <index name="sessions_user_id_index" uuid="a56614be-96a8-46c4-a79d-d7e4375fe811">
-        <index-field name="user_id" uuid="325f191d-9d05-40f1-94c0-ece06b34a696"/>
-      </index>
-      <index name="sessions_last_activity_index" uuid="8f526178-34b1-4d2c-a848-9117c630c96f">
-        <index-field name="last_activity" uuid="3f5191c8-4562-4d8a-9c2a-d511c73e8813"/>
-      </index>
-      <orm-attributes>
-        <attribute name="table">sessions</attribute>
-      </orm-attributes>
-    </entity>
-    <entity name="\App\Models\user" local-name="user" namespace="\App\Models" uuid="{082AB8B8-1E7D-4299-9A68-9205946C4ECF}">
-      <field name="id" type="bigInteger" required="true" primary="true" auto-increment="true" uuid="aac3c356-84cb-48c9-abe9-cabb224a6104">
-        <orm-attributes>
-          <attribute name="unsigned">true</attribute>
-        </orm-attributes>
-      </field>
-      <field name="name" type="string" size="255" required="true" uuid="ef056a12-b1b8-4be9-9753-6d17ddea5fcb"/>
-      <field name="email" type="string" size="255" required="true" uuid="5a026475-4968-4c65-a466-26ba89095d00"/>
-      <field name="email_verified_at" type="timestamp" uuid="d984a2ee-646e-439f-861f-6e3d4798f25a"/>
-      <field name="password" type="string" size="255" required="true" uuid="4dd5a5d2-d9a8-46d0-9821-db361e41536a"/>
-      <field name="two_factor_secret" type="text" uuid="769e02f0-7559-45cd-8546-c191fc38ac8a"/>
-      <field name="two_factor_recovery_codes" type="text" uuid="df0250e1-2b70-483b-8067-de8d818a265a"/>
-      <field name="remember_token" type="string" size="100" uuid="12beabd6-09d7-41f3-844d-6a5005150f3d"/>
-      <field name="current_team_id" type="bigInteger" uuid="550af66c-c478-416d-b2b3-c61935012608">
-        <orm-attributes>
-          <attribute name="unsigned">true</attribute>
-        </orm-attributes>
-      </field>
-      <field name="profile_photo_path" type="text" uuid="babd4c00-3ce2-46cb-a997-ef57cf80f1f3"/>
-      <field name="created_at" type="timestamp" uuid="2bf58104-dc9b-4cc8-ba68-b446fda3bb8d"/>
-      <field name="updated_at" type="timestamp" uuid="0ba00418-312e-4d03-94af-70dc7140c166"/>
-      <index name="users_email_unique" unique="true" uuid="2f2bba41-913d-4b75-be7b-d6c41b5ecf9c">
-        <index-field name="email" uuid="adf7e3a6-bfa8-48f6-9e88-5212c735207a"/>
-      </index>
-      <orm-attributes>
-        <attribute name="table">users</attribute>
-      </orm-attributes>
-    </entity>
     <entity name="\App\Models\category" local-name="category" namespace="\App\Models" uuid="b399a5b5-00f1-4cfe-9c66-1679669ec4a9">
       <field name="id" type="bigInteger" required="true" unique="true" primary="true" unsigned="true" auto-increment="true" uuid="93a21c88-cfa3-46e7-85a4-e3ccf45e81ef"/>
       <field name="title" type="string" uuid="d1120c41-6004-49d5-99d5-3843a9e718d4"/>
@@ -132,327 +12,123 @@
     <orm-attributes>
       <attribute name="migrations-path">database/migrations</attribute>
     </orm-attributes>
-    <migrations version="1.0">
-      <revision uuid="ea940b85-f216-440e-b85f-14f11f4f43dc" date="2021-03-03 14:44:35.062663" exportable="true">
-        <element action="add" uuid="c3654a2a-e0e8-49d6-a156-07e4276cd3ce" type="module">
-          <property name="export-format" value="Laravel"/>
-          <property name="export-path" value="."/>
-          <property name="local-name" value="Name of the project"/>
-          <property name="local-namespace" value="App\Models"/>
-          <property name="migrations-path" value="database/migrations"/>
-          <property name="name" value="\Name of the project"/>
-          <property name="namespace" value="\App\Models"/>
-        </element>
-        <element action="add" uuid="{460CD855-8FB9-4879-9D22-5BAADEFA1CDD}" parent-uuid="c3654a2a-e0e8-49d6-a156-07e4276cd3ce" type="entity">
-          <property name="local-name" value="failed_job"/>
-          <property name="name" value="\App\Models\failed_job"/>
-          <property name="namespace" value="\App\Models"/>
-          <property name="table" value="failed_jobs"/>
-        </element>
-        <element action="add" uuid="{17B015BA-0467-499E-9503-2D6466D255B7}" parent-uuid="c3654a2a-e0e8-49d6-a156-07e4276cd3ce" type="entity">
-          <property name="local-name" value="migration"/>
-          <property name="name" value="\App\Models\migration"/>
-          <property name="namespace" value="\App\Models"/>
-          <property name="table" value="migrations"/>
-        </element>
-        <element action="add" uuid="{1C76DEC5-2A23-4114-A204-1E587A710DC6}" parent-uuid="c3654a2a-e0e8-49d6-a156-07e4276cd3ce" type="entity">
-          <property name="local-name" value="password_reset"/>
-          <property name="name" value="\App\Models\password_reset"/>
-          <property name="namespace" value="\App\Models"/>
-          <property name="table" value="password_resets"/>
-        </element>
-        <element action="add" uuid="{42A714AB-37EF-497B-A052-1BD712DE626A}" parent-uuid="c3654a2a-e0e8-49d6-a156-07e4276cd3ce" type="entity">
-          <property name="local-name" value="personal_access_token"/>
-          <property name="name" value="\App\Models\personal_access_token"/>
-          <property name="namespace" value="\App\Models"/>
-          <property name="table" value="personal_access_tokens"/>
-        </element>
-        <element action="add" uuid="{240FD8B7-7E27-48AC-BE94-901034C4E615}" parent-uuid="c3654a2a-e0e8-49d6-a156-07e4276cd3ce" type="entity">
-          <property name="local-name" value="session"/>
-          <property name="name" value="\App\Models\session"/>
-          <property name="namespace" value="\App\Models"/>
-          <property name="table" value="sessions"/>
-        </element>
-        <element action="add" uuid="{082AB8B8-1E7D-4299-9A68-9205946C4ECF}" parent-uuid="c3654a2a-e0e8-49d6-a156-07e4276cd3ce" type="entity">
-          <property name="local-name" value="user"/>
-          <property name="name" value="\App\Models\user"/>
-          <property name="namespace" value="\App\Models"/>
-          <property name="table" value="users"/>
-        </element>
-        <element action="add" uuid="61366893-947f-4139-a84f-cb73ce154795" parent-uuid="{460CD855-8FB9-4879-9D22-5BAADEFA1CDD}" type="field">
-          <property name="auto-increment" value="true"/>
-          <property name="name" value="id"/>
-          <property name="primary" value="true"/>
-          <property name="required" value="true"/>
-          <property name="type" value="bigInteger"/>
-          <property name="unsigned" value="true"/>
-        </element>
-        <element action="add" uuid="0ebf12a5-0a6b-43e6-a659-2584016c82a1" parent-uuid="{460CD855-8FB9-4879-9D22-5BAADEFA1CDD}" sibling-uuid="61366893-947f-4139-a84f-cb73ce154795" type="field">
-          <property name="name" value="uuid"/>
-          <property name="required" value="true"/>
-          <property name="size" value="255"/>
-          <property name="type" value="string"/>
-        </element>
-        <element action="add" uuid="86191cbb-a7ff-49db-8f5d-32f1010dda97" parent-uuid="{460CD855-8FB9-4879-9D22-5BAADEFA1CDD}" sibling-uuid="0ebf12a5-0a6b-43e6-a659-2584016c82a1" type="field">
-          <property name="name" value="connection"/>
-          <property name="required" value="true"/>
-          <property name="type" value="text"/>
-        </element>
-        <element action="add" uuid="4aeeb566-5e91-40a5-bd90-9eb5a823a038" parent-uuid="{460CD855-8FB9-4879-9D22-5BAADEFA1CDD}" sibling-uuid="86191cbb-a7ff-49db-8f5d-32f1010dda97" type="field">
-          <property name="name" value="queue"/>
-          <property name="required" value="true"/>
-          <property name="type" value="text"/>
-        </element>
-        <element action="add" uuid="57c0fa0a-f1e3-46d8-b3f1-191b3b1e9830" parent-uuid="{460CD855-8FB9-4879-9D22-5BAADEFA1CDD}" sibling-uuid="4aeeb566-5e91-40a5-bd90-9eb5a823a038" type="field">
-          <property name="name" value="payload"/>
-          <property name="required" value="true"/>
-          <property name="type" value="longText"/>
-        </element>
-        <element action="add" uuid="fb47216c-feb8-40f1-9533-bb62d0998c0d" parent-uuid="{460CD855-8FB9-4879-9D22-5BAADEFA1CDD}" sibling-uuid="57c0fa0a-f1e3-46d8-b3f1-191b3b1e9830" type="field">
-          <property name="name" value="exception"/>
-          <property name="required" value="true"/>
-          <property name="type" value="longText"/>
-        </element>
-        <element action="add" uuid="ac21c409-c2d5-4d24-9da6-8eae22d89c39" parent-uuid="{460CD855-8FB9-4879-9D22-5BAADEFA1CDD}" sibling-uuid="fb47216c-feb8-40f1-9533-bb62d0998c0d" type="field">
-          <property name="default" value="NOW()"/>
-          <property name="name" value="failed_at"/>
-          <property name="required" value="true"/>
-          <property name="type" value="timestamp"/>
-        </element>
-        <element action="add" uuid="57bf0844-cffa-453f-8f67-decd54e20999" parent-uuid="{17B015BA-0467-499E-9503-2D6466D255B7}" type="field">
-          <property name="auto-increment" value="true"/>
-          <property name="name" value="id"/>
-          <property name="primary" value="true"/>
-          <property name="required" value="true"/>
-          <property name="type" value="integer"/>
-          <property name="unsigned" value="true"/>
-        </element>
-        <element action="add" uuid="000314f3-f7ba-4328-8723-6f07d53b2067" parent-uuid="{17B015BA-0467-499E-9503-2D6466D255B7}" sibling-uuid="57bf0844-cffa-453f-8f67-decd54e20999" type="field">
-          <property name="name" value="migration"/>
-          <property name="required" value="true"/>
-          <property name="size" value="255"/>
-          <property name="type" value="string"/>
-        </element>
-        <element action="add" uuid="06fa31f6-0786-4ba8-80b4-19daf2c2d7fa" parent-uuid="{17B015BA-0467-499E-9503-2D6466D255B7}" sibling-uuid="000314f3-f7ba-4328-8723-6f07d53b2067" type="field">
-          <property name="name" value="batch"/>
-          <property name="required" value="true"/>
-          <property name="type" value="integer"/>
-        </element>
-        <element action="add" uuid="9fda339e-c5c7-4f7b-95fd-2502891258fa" parent-uuid="{1C76DEC5-2A23-4114-A204-1E587A710DC6}" type="field">
-          <property name="name" value="email"/>
-          <property name="required" value="true"/>
-          <property name="size" value="255"/>
-          <property name="type" value="string"/>
-        </element>
-        <element action="add" uuid="1d73e6cd-61a2-46f8-a845-0d7c87ca936f" parent-uuid="{1C76DEC5-2A23-4114-A204-1E587A710DC6}" sibling-uuid="9fda339e-c5c7-4f7b-95fd-2502891258fa" type="field">
-          <property name="name" value="token"/>
-          <property name="required" value="true"/>
-          <property name="size" value="255"/>
-          <property name="type" value="string"/>
-        </element>
-        <element action="add" uuid="77ab0866-aeab-4967-925e-fced718706d3" parent-uuid="{1C76DEC5-2A23-4114-A204-1E587A710DC6}" sibling-uuid="1d73e6cd-61a2-46f8-a845-0d7c87ca936f" type="field">
-          <property name="name" value="created_at"/>
-          <property name="type" value="timestamp"/>
-        </element>
-        <element action="add" uuid="25d3acf1-ceb4-47d5-8d44-55f6de81eaeb" parent-uuid="{42A714AB-37EF-497B-A052-1BD712DE626A}" type="field">
-          <property name="auto-increment" value="true"/>
-          <property name="name" value="id"/>
-          <property name="primary" value="true"/>
-          <property name="required" value="true"/>
-          <property name="type" value="bigInteger"/>
-          <property name="unsigned" value="true"/>
-        </element>
-        <element action="add" uuid="086414a7-4284-4ebd-9aff-455089e0d8f3" parent-uuid="{42A714AB-37EF-497B-A052-1BD712DE626A}" sibling-uuid="25d3acf1-ceb4-47d5-8d44-55f6de81eaeb" type="field">
-          <property name="name" value="tokenable_type"/>
-          <property name="required" value="true"/>
-          <property name="size" value="255"/>
-          <property name="type" value="string"/>
-        </element>
-        <element action="add" uuid="92288cd1-911d-4e8b-82e3-c205e8effd9f" parent-uuid="{42A714AB-37EF-497B-A052-1BD712DE626A}" sibling-uuid="086414a7-4284-4ebd-9aff-455089e0d8f3" type="field">
-          <property name="name" value="tokenable_id"/>
-          <property name="required" value="true"/>
-          <property name="type" value="bigInteger"/>
-          <property name="unsigned" value="true"/>
-        </element>
-        <element action="add" uuid="1b7fe571-f895-4cf8-91fd-429f07c4f834" parent-uuid="{42A714AB-37EF-497B-A052-1BD712DE626A}" sibling-uuid="92288cd1-911d-4e8b-82e3-c205e8effd9f" type="field">
-          <property name="name" value="name"/>
-          <property name="required" value="true"/>
-          <property name="size" value="255"/>
-          <property name="type" value="string"/>
-        </element>
-        <element action="add" uuid="67cd5dcd-ff85-4145-8acf-5963650af10f" parent-uuid="{42A714AB-37EF-497B-A052-1BD712DE626A}" sibling-uuid="1b7fe571-f895-4cf8-91fd-429f07c4f834" type="field">
-          <property name="name" value="token"/>
-          <property name="required" value="true"/>
-          <property name="size" value="64"/>
-          <property name="type" value="string"/>
-        </element>
-        <element action="add" uuid="a971a2cd-c386-47ad-a9a5-8d2e4b76d231" parent-uuid="{42A714AB-37EF-497B-A052-1BD712DE626A}" sibling-uuid="67cd5dcd-ff85-4145-8acf-5963650af10f" type="field">
-          <property name="name" value="abilities"/>
-          <property name="type" value="text"/>
-        </element>
-        <element action="add" uuid="03b02b3e-91a6-4d78-b9e8-02ac60825458" parent-uuid="{42A714AB-37EF-497B-A052-1BD712DE626A}" sibling-uuid="a971a2cd-c386-47ad-a9a5-8d2e4b76d231" type="field">
-          <property name="name" value="last_used_at"/>
-          <property name="type" value="timestamp"/>
-        </element>
-        <element action="add" uuid="e0b99f48-2d6d-4af5-b319-13d99e5b9a6c" parent-uuid="{42A714AB-37EF-497B-A052-1BD712DE626A}" sibling-uuid="03b02b3e-91a6-4d78-b9e8-02ac60825458" type="field">
-          <property name="name" value="created_at"/>
-          <property name="type" value="timestamp"/>
-        </element>
-        <element action="add" uuid="402fb397-a8fc-411b-9f46-244f897746cb" parent-uuid="{42A714AB-37EF-497B-A052-1BD712DE626A}" sibling-uuid="e0b99f48-2d6d-4af5-b319-13d99e5b9a6c" type="field">
-          <property name="name" value="updated_at"/>
-          <property name="type" value="timestamp"/>
-        </element>
-        <element action="add" uuid="e58a82e9-c997-471e-a04e-f782a053fa42" parent-uuid="{240FD8B7-7E27-48AC-BE94-901034C4E615}" type="field">
-          <property name="name" value="id"/>
-          <property name="primary" value="true"/>
-          <property name="required" value="true"/>
-          <property name="size" value="255"/>
-          <property name="type" value="string"/>
-        </element>
-        <element action="add" uuid="9588b45d-da2b-4cf1-958d-0ae5b44fb385" parent-uuid="{240FD8B7-7E27-48AC-BE94-901034C4E615}" sibling-uuid="e58a82e9-c997-471e-a04e-f782a053fa42" type="field">
-          <property name="name" value="user_id"/>
-          <property name="type" value="bigInteger"/>
-          <property name="unsigned" value="true"/>
-        </element>
-        <element action="add" uuid="38c96211-f7af-449c-be8f-bf26114b47e9" parent-uuid="{240FD8B7-7E27-48AC-BE94-901034C4E615}" sibling-uuid="9588b45d-da2b-4cf1-958d-0ae5b44fb385" type="field">
-          <property name="name" value="ip_address"/>
-          <property name="size" value="45"/>
-          <property name="type" value="string"/>
-        </element>
-        <element action="add" uuid="6ece6b2a-145c-43d5-b40b-ae13c7970aad" parent-uuid="{240FD8B7-7E27-48AC-BE94-901034C4E615}" sibling-uuid="38c96211-f7af-449c-be8f-bf26114b47e9" type="field">
-          <property name="name" value="user_agent"/>
-          <property name="type" value="text"/>
-        </element>
-        <element action="add" uuid="af973f27-873a-4b17-9ae8-c10cbacff1a3" parent-uuid="{240FD8B7-7E27-48AC-BE94-901034C4E615}" sibling-uuid="6ece6b2a-145c-43d5-b40b-ae13c7970aad" type="field">
-          <property name="name" value="payload"/>
-          <property name="required" value="true"/>
-          <property name="type" value="text"/>
-        </element>
-        <element action="add" uuid="964f2e5f-04e9-4fe8-aebf-b892cff8219d" parent-uuid="{240FD8B7-7E27-48AC-BE94-901034C4E615}" sibling-uuid="af973f27-873a-4b17-9ae8-c10cbacff1a3" type="field">
-          <property name="name" value="last_activity"/>
-          <property name="required" value="true"/>
-          <property name="type" value="integer"/>
-        </element>
-        <element action="add" uuid="aac3c356-84cb-48c9-abe9-cabb224a6104" parent-uuid="{082AB8B8-1E7D-4299-9A68-9205946C4ECF}" type="field">
-          <property name="auto-increment" value="true"/>
-          <property name="name" value="id"/>
-          <property name="primary" value="true"/>
-          <property name="required" value="true"/>
-          <property name="type" value="bigInteger"/>
-          <property name="unsigned" value="true"/>
-        </element>
-        <element action="add" uuid="ef056a12-b1b8-4be9-9753-6d17ddea5fcb" parent-uuid="{082AB8B8-1E7D-4299-9A68-9205946C4ECF}" sibling-uuid="aac3c356-84cb-48c9-abe9-cabb224a6104" type="field">
-          <property name="name" value="name"/>
-          <property name="required" value="true"/>
-          <property name="size" value="255"/>
-          <property name="type" value="string"/>
-        </element>
-        <element action="add" uuid="5a026475-4968-4c65-a466-26ba89095d00" parent-uuid="{082AB8B8-1E7D-4299-9A68-9205946C4ECF}" sibling-uuid="ef056a12-b1b8-4be9-9753-6d17ddea5fcb" type="field">
-          <property name="name" value="email"/>
-          <property name="required" value="true"/>
-          <property name="size" value="255"/>
-          <property name="type" value="string"/>
-        </element>
-        <element action="add" uuid="d984a2ee-646e-439f-861f-6e3d4798f25a" parent-uuid="{082AB8B8-1E7D-4299-9A68-9205946C4ECF}" sibling-uuid="5a026475-4968-4c65-a466-26ba89095d00" type="field">
-          <property name="name" value="email_verified_at"/>
-          <property name="type" value="timestamp"/>
-        </element>
-        <element action="add" uuid="4dd5a5d2-d9a8-46d0-9821-db361e41536a" parent-uuid="{082AB8B8-1E7D-4299-9A68-9205946C4ECF}" sibling-uuid="d984a2ee-646e-439f-861f-6e3d4798f25a" type="field">
-          <property name="name" value="password"/>
-          <property name="required" value="true"/>
-          <property name="size" value="255"/>
-          <property name="type" value="string"/>
-        </element>
-        <element action="add" uuid="769e02f0-7559-45cd-8546-c191fc38ac8a" parent-uuid="{082AB8B8-1E7D-4299-9A68-9205946C4ECF}" sibling-uuid="4dd5a5d2-d9a8-46d0-9821-db361e41536a" type="field">
-          <property name="name" value="two_factor_secret"/>
-          <property name="type" value="text"/>
-        </element>
-        <element action="add" uuid="df0250e1-2b70-483b-8067-de8d818a265a" parent-uuid="{082AB8B8-1E7D-4299-9A68-9205946C4ECF}" sibling-uuid="769e02f0-7559-45cd-8546-c191fc38ac8a" type="field">
-          <property name="name" value="two_factor_recovery_codes"/>
-          <property name="type" value="text"/>
-        </element>
-        <element action="add" uuid="12beabd6-09d7-41f3-844d-6a5005150f3d" parent-uuid="{082AB8B8-1E7D-4299-9A68-9205946C4ECF}" sibling-uuid="df0250e1-2b70-483b-8067-de8d818a265a" type="field">
-          <property name="name" value="remember_token"/>
-          <property name="size" value="100"/>
-          <property name="type" value="string"/>
-        </element>
-        <element action="add" uuid="550af66c-c478-416d-b2b3-c61935012608" parent-uuid="{082AB8B8-1E7D-4299-9A68-9205946C4ECF}" sibling-uuid="12beabd6-09d7-41f3-844d-6a5005150f3d" type="field">
-          <property name="name" value="current_team_id"/>
-          <property name="type" value="bigInteger"/>
-          <property name="unsigned" value="true"/>
-        </element>
-        <element action="add" uuid="babd4c00-3ce2-46cb-a997-ef57cf80f1f3" parent-uuid="{082AB8B8-1E7D-4299-9A68-9205946C4ECF}" sibling-uuid="550af66c-c478-416d-b2b3-c61935012608" type="field">
-          <property name="name" value="profile_photo_path"/>
-          <property name="type" value="text"/>
-        </element>
-        <element action="add" uuid="2bf58104-dc9b-4cc8-ba68-b446fda3bb8d" parent-uuid="{082AB8B8-1E7D-4299-9A68-9205946C4ECF}" sibling-uuid="babd4c00-3ce2-46cb-a997-ef57cf80f1f3" type="field">
-          <property name="name" value="created_at"/>
-          <property name="type" value="timestamp"/>
-        </element>
-        <element action="add" uuid="0ba00418-312e-4d03-94af-70dc7140c166" parent-uuid="{082AB8B8-1E7D-4299-9A68-9205946C4ECF}" sibling-uuid="2bf58104-dc9b-4cc8-ba68-b446fda3bb8d" type="field">
-          <property name="name" value="updated_at"/>
-          <property name="type" value="timestamp"/>
-        </element>
-        <element action="add" uuid="5e6ef8f6-0d94-45f6-876f-e5aa6eb63d8f" parent-uuid="{460CD855-8FB9-4879-9D22-5BAADEFA1CDD}" type="index">
-          <property name="name" value="failed_jobs_uuid_unique"/>
-          <property name="unique" value="true"/>
-        </element>
-        <element action="add" uuid="321ec300-d3c0-4342-be68-a2649a5e13ba" parent-uuid="{1C76DEC5-2A23-4114-A204-1E587A710DC6}" type="index">
-          <property name="name" value="password_resets_email_index"/>
-        </element>
-        <element action="add" uuid="38c31640-fb5a-4c4d-a408-68fd2ef2c39f" parent-uuid="{42A714AB-37EF-497B-A052-1BD712DE626A}" type="index">
-          <property name="name" value="personal_access_tokens_token_unique"/>
-          <property name="unique" value="true"/>
-        </element>
-        <element action="add" uuid="44dbe76c-6e32-4383-8a90-f063ab734c4a" parent-uuid="{42A714AB-37EF-497B-A052-1BD712DE626A}" type="index">
-          <property name="name" value="personal_access_tokens_tokenable_type_tokenable_id_index"/>
-        </element>
-        <element action="add" uuid="a56614be-96a8-46c4-a79d-d7e4375fe811" parent-uuid="{240FD8B7-7E27-48AC-BE94-901034C4E615}" type="index">
-          <property name="name" value="sessions_user_id_index"/>
-        </element>
-        <element action="add" uuid="8f526178-34b1-4d2c-a848-9117c630c96f" parent-uuid="{240FD8B7-7E27-48AC-BE94-901034C4E615}" type="index">
-          <property name="name" value="sessions_last_activity_index"/>
-        </element>
-        <element action="add" uuid="2f2bba41-913d-4b75-be7b-d6c41b5ecf9c" parent-uuid="{082AB8B8-1E7D-4299-9A68-9205946C4ECF}" type="index">
-          <property name="name" value="users_email_unique"/>
-          <property name="unique" value="true"/>
-        </element>
-        <element action="add" uuid="e3a184cd-dcf0-46c2-9cdf-764049dff01e" parent-uuid="5e6ef8f6-0d94-45f6-876f-e5aa6eb63d8f" type="index-field">
-          <property name="name" value="uuid"/>
-        </element>
-        <element action="add" uuid="80ba38a4-9727-43e1-81f2-09c2c35d8d11" parent-uuid="321ec300-d3c0-4342-be68-a2649a5e13ba" type="index-field">
-          <property name="name" value="email"/>
-        </element>
-        <element action="add" uuid="66da4597-1032-4152-b22e-657db797462e" parent-uuid="38c31640-fb5a-4c4d-a408-68fd2ef2c39f" type="index-field">
-          <property name="name" value="token"/>
-        </element>
-        <element action="add" uuid="cef1870c-4c04-4f5a-9235-3321271f8834" parent-uuid="44dbe76c-6e32-4383-8a90-f063ab734c4a" type="index-field">
-          <property name="name" value="tokenable_type"/>
-        </element>
-        <element action="add" uuid="d7e92315-77e4-4a41-b11b-f43450e0d86b" parent-uuid="44dbe76c-6e32-4383-8a90-f063ab734c4a" type="index-field">
-          <property name="name" value="tokenable_id"/>
-        </element>
-        <element action="add" uuid="325f191d-9d05-40f1-94c0-ece06b34a696" parent-uuid="a56614be-96a8-46c4-a79d-d7e4375fe811" type="index-field">
-          <property name="name" value="user_id"/>
-        </element>
-        <element action="add" uuid="3f5191c8-4562-4d8a-9c2a-d511c73e8813" parent-uuid="8f526178-34b1-4d2c-a848-9117c630c96f" type="index-field">
-          <property name="name" value="last_activity"/>
-        </element>
-        <element action="add" uuid="adf7e3a6-bfa8-48f6-9e88-5212c735207a" parent-uuid="2f2bba41-913d-4b75-be7b-d6c41b5ecf9c" type="index-field">
-          <property name="name" value="email"/>
-        </element>
-      </revision>
-    </migrations>
+    <migrations version="1.0"/>
+  </module>
+  <module name="\Laravel core" local-name="Laravel core" namespace="\App\Models" local-namespace="App\Models" export-format="Laravel" export-path="." uuid="479aa5a0-6907-4462-907a-d12c019676f0">
+    <entity name="\App\Models\failed_job" local-name="failed_job" namespace="\App\Models" uuid="ea3ce824-f49c-4d0c-9d74-ac7306d16630">
+      <field name="id" type="bigInteger" required="true" primary="true" auto-increment="true" uuid="9e414ae7-8ab6-4048-b171-e64e1fd81a09">
+        <orm-attributes>
+          <attribute name="unsigned">true</attribute>
+        </orm-attributes>
+      </field>
+      <field name="uuid" type="string" size="255" required="true" uuid="f0d2edab-cbd1-461b-aba4-11a418cd28e6"/>
+      <field name="connection" type="text" required="true" uuid="c0d112a5-3951-494a-b6e0-204d45330a8f"/>
+      <field name="queue" type="text" required="true" uuid="4e42ddd5-0636-44a0-b6ef-7486a33ccc4c"/>
+      <field name="payload" type="longText" required="true" uuid="25893285-6fc0-43a4-a3d3-d052d9133d6e"/>
+      <field name="exception" type="longText" required="true" uuid="cd85d27b-84a6-485b-b5f4-ccb9c65b4395"/>
+      <field name="failed_at" type="timestamp" default="NOW()" required="true" uuid="ad9d9346-022d-443b-a559-474766987661"/>
+      <orm-attributes>
+        <attribute name="table">failed_jobs</attribute>
+      </orm-attributes>
+    </entity>
+    <entity name="\App\Models\migration" local-name="migration" namespace="\App\Models" uuid="795dc33f-8887-48b9-a4b6-9f3fee375ccd">
+      <field name="id" type="integer" required="true" primary="true" auto-increment="true" uuid="740b7c4d-9a5b-4bc9-b99f-7c7f488d581a">
+        <orm-attributes>
+          <attribute name="unsigned">true</attribute>
+        </orm-attributes>
+      </field>
+      <field name="migration" type="string" size="255" required="true" uuid="1970ddab-c4d7-4e2f-9533-87a30d894f58"/>
+      <field name="batch" type="integer" required="true" uuid="1ec00d08-f20a-4cc1-9d01-279c17301356"/>
+      <orm-attributes>
+        <attribute name="table">migrations</attribute>
+      </orm-attributes>
+    </entity>
+    <entity name="\App\Models\session" local-name="session" namespace="\App\Models" uuid="82a6bdd6-4142-4762-8491-0a65b1f27a5a">
+      <field name="id" type="string" size="255" required="true" primary="true" uuid="11584821-85ff-4313-aba2-e26fe88e3a63"/>
+      <field name="user_id" type="bigInteger" uuid="7c8d1f84-e132-4506-8b7e-2ddd235aa937">
+        <orm-attributes>
+          <attribute name="unsigned">true</attribute>
+        </orm-attributes>
+      </field>
+      <field name="ip_address" type="string" size="45" uuid="dc2783c7-6e51-4721-8dc4-df0f6a9f265e"/>
+      <field name="user_agent" type="text" uuid="56e01c28-5b8b-4f59-b346-eac14f34a440"/>
+      <field name="payload" type="text" required="true" uuid="29d517c2-0d21-4051-b833-76b1c8e98f33"/>
+      <field name="last_activity" type="integer" required="true" uuid="6929214f-a940-4cf3-b059-0dd1ae9b7259"/>
+      <orm-attributes>
+        <attribute name="table">sessions</attribute>
+      </orm-attributes>
+    </entity>
+    <entity name="\App\Models\personal_access_token" local-name="personal_access_token" namespace="\App\Models" uuid="9f0a3ea8-b40f-4901-aebc-d2dc1da6c88a">
+      <field name="id" type="bigInteger" required="true" primary="true" auto-increment="true" uuid="d73c6965-2851-4820-808e-3e86dbd69d7b">
+        <orm-attributes>
+          <attribute name="unsigned">true</attribute>
+        </orm-attributes>
+      </field>
+      <field name="tokenable_type" type="string" size="255" required="true" uuid="4c4cc01b-6ff6-4b5e-b6dc-ce5ca356e3be"/>
+      <field name="tokenable_id" type="bigInteger" required="true" uuid="7670ff6a-9c1d-4804-bbb0-791dcfbf2da9">
+        <orm-attributes>
+          <attribute name="unsigned">true</attribute>
+        </orm-attributes>
+      </field>
+      <field name="name" type="string" size="255" required="true" uuid="b2ce10bc-1e49-43f4-8c5a-aaf3cddfd07e"/>
+      <field name="token" type="string" size="64" required="true" uuid="e898bfa1-13c6-42f4-a0d8-dabe5890c139"/>
+      <field name="abilities" type="text" uuid="dc7a4423-9823-471f-bb9b-45dfc02e0875"/>
+      <field name="last_used_at" type="timestamp" uuid="2b5b7d93-f6c6-4772-9af2-7df21d09b2d9"/>
+      <field name="created_at" type="timestamp" uuid="a3038d3d-261d-4f9f-beb3-0ae9cd169006"/>
+      <field name="updated_at" type="timestamp" uuid="95a0139e-9b22-4daf-9498-1e2936c360a6"/>
+      <orm-attributes>
+        <attribute name="table">personal_access_tokens</attribute>
+      </orm-attributes>
+    </entity>
+    <entity name="\App\Models\password_reset" local-name="password_reset" namespace="\App\Models" uuid="6fe2a0c3-6532-4135-aa86-da849bcc9213">
+      <field name="email" type="string" size="255" required="true" uuid="93112fc7-beb0-4393-b437-e89128acb826"/>
+      <field name="token" type="string" size="255" required="true" uuid="5b413e8f-5a15-4058-84f3-11b67fd72495"/>
+      <field name="created_at" type="timestamp" uuid="638e45f7-a22e-4c64-8b41-702b1c09fcc2"/>
+      <orm-attributes>
+        <attribute name="table">password_resets</attribute>
+      </orm-attributes>
+    </entity>
+    <entity name="\App\Models\user" local-name="user" namespace="\App\Models" uuid="8fbb5d37-da98-4f94-a3ed-6a8d65295dee">
+      <field name="id" type="bigInteger" required="true" primary="true" auto-increment="true" uuid="335fab9f-025c-4110-be5b-6182ae8b0396">
+        <orm-attributes>
+          <attribute name="unsigned">true</attribute>
+        </orm-attributes>
+      </field>
+      <field name="name" type="string" size="255" required="true" uuid="23a27684-dd85-4fae-bc28-2e17ccadca6f"/>
+      <field name="email" type="string" size="255" required="true" uuid="6076e351-d503-4dd7-b663-632ce03d9e64"/>
+      <field name="email_verified_at" type="timestamp" uuid="82476b00-c5bb-4174-8c53-fdd5593dbbf7"/>
+      <field name="password" type="string" size="255" required="true" uuid="1633af9a-75b0-4e8e-883b-357af0c80111"/>
+      <field name="two_factor_secret" type="text" uuid="4faf7120-3093-4147-8e0d-386425450400"/>
+      <field name="two_factor_recovery_codes" type="text" uuid="26e70a61-a790-4ded-bf3e-3915418ea70a"/>
+      <field name="remember_token" type="string" size="100" uuid="42250a35-16a4-4404-aba3-2dc4680dace8"/>
+      <field name="current_team_id" type="bigInteger" uuid="471aa7b2-a4ff-4ee4-a793-83530b07c4d8">
+        <orm-attributes>
+          <attribute name="unsigned">true</attribute>
+        </orm-attributes>
+      </field>
+      <field name="profile_photo_path" type="text" uuid="a62e8f29-aebc-4923-8987-ac8d62ac5d94"/>
+      <field name="created_at" type="timestamp" uuid="366fd56d-daf3-4a27-9768-e441b8548864"/>
+      <field name="updated_at" type="timestamp" uuid="69a42cbe-96b1-4091-a411-5e52847b034c"/>
+      <orm-attributes>
+        <attribute name="table">users</attribute>
+      </orm-attributes>
+    </entity>
+    <orm-attributes>
+      <attribute name="migrations-disabled">true</attribute>
+      <attribute name="models-disabled">true</attribute>
+    </orm-attributes>
+    <migrations version="1.0"/>
   </module>
   <visual-data>
-    <entity uuid="b399a5b5-00f1-4cfe-9c66-1679669ec4a9" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="45" position-y="453" size-x="0" size-x2="124" size-y="0" size-y2="101"/>
-    <entity uuid="{082AB8B8-1E7D-4299-9A68-9205946C4ECF}" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="35" position-y="50" size-x="0" size-x2="167" size-y="0" size-y2="185"/>
-    <entity uuid="{17B015BA-0467-499E-9503-2D6466D255B7}" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="728" position-y="63" size-x="0" size-x2="116" size-y="0" size-y2="59"/>
-    <entity uuid="{1C76DEC5-2A23-4114-A204-1E587A710DC6}" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="246" position-y="175" size-x="0" size-x2="122" size-y="0" size-y2="59"/>
-    <entity uuid="{240FD8B7-7E27-48AC-BE94-901034C4E615}" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="244" position-y="53" size-x="0" size-x2="118" size-y="0" size-y2="101"/>
-    <entity uuid="{42A714AB-37EF-497B-A052-1BD712DE626A}" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="404" position-y="56" size-x="0" size-x2="142" size-y="0" size-y2="143"/>
-    <entity uuid="{460CD855-8FB9-4879-9D22-5BAADEFA1CDD}" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="578" position-y="58" size-x="0" size-x2="114" size-y="0" size-y2="115"/>
+    <entity uuid="6fe2a0c3-6532-4135-aa86-da849bcc9213" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="670" position-y="40" size-x="0" size-x2="122" size-y="0" size-y2="59"/>
+    <entity uuid="795dc33f-8887-48b9-a4b6-9f3fee375ccd" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="174" position-y="40" size-x="0" size-x2="116" size-y="0" size-y2="59"/>
+    <entity uuid="82a6bdd6-4142-4762-8491-0a65b1f27a5a" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="330" position-y="40" size-x="0" size-x2="118" size-y="0" size-y2="101"/>
+    <entity uuid="8fbb5d37-da98-4f94-a3ed-6a8d65295dee" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="832" position-y="40" size-x="0" size-x2="167" size-y="0" size-y2="185"/>
+    <entity uuid="9f0a3ea8-b40f-4901-aebc-d2dc1da6c88a" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="488" position-y="40" size-x="0" size-x2="142" size-y="0" size-y2="143"/>
+    <entity uuid="b399a5b5-00f1-4cfe-9c66-1679669ec4a9" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="50" position-y="59" size-x="0" size-x2="124" size-y="0" size-y2="101"/>
+    <entity uuid="ea3ce824-f49c-4d0c-9d74-ac7306d16630" bg-color="#FFFFFF" hdr-color="#D2D2D2" position-x="20" position-y="40" size-x="0" size-x2="114" size-y="0" size-y2="115"/>
+    <module uuid="479aa5a0-6907-4462-907a-d12c019676f0" bg-color="#FEEFE3" position-x="1017" position-y="50" size-x="0" size-x2="1019" size-y="0" size-y2="245"/>
     <module uuid="c3654a2a-e0e8-49d6-a156-07e4276cd3ce" bg-color="#FEFCE8" position-x="50" position-y="50" size-x="0" size-x2="867" size-y="0" size-y2="729"/>
-    <project uuid="b541181b-21a9-4b07-a372-a83da027137b" size-x="0" size-x2="967" size-y="0" size-y2="829"/>
+    <project uuid="b541181b-21a9-4b07-a372-a83da027137b" size-x="0" size-x2="2086" size-y="0" size-y2="829"/>
   </visual-data>
 </skipper>

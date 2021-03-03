@@ -31,9 +31,13 @@ See https://jetstream.laravel.com/
 
 ## Step 3: Prepare to use Skipper
 
-Connect MySQL Workbench, reverse engineer and save the model. Import the model to Skipper and save the Skipper-file into the project.
+Connect MySQL Workbench, reverse engineer and save the model. Import the model into Skipper.
 
-Now there are six entities in the Skipper "Application module". You're prepared to scaffold ...
+Now there are six entities in Skipper. Name the module (e. g. Laravel core) and create a new module (e. g. Application module) for your application. Set the properties migrations-disabled and models-disabled to true in the Laravel core module.
+
+Save the Skipper-file into the projects root-folder. 
+
+Now you can scaffold your own entities within the Application module, save and Export to ORM ...
 
 
 ## Step 4: Templating
