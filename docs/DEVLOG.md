@@ -57,10 +57,34 @@ See https://tailwindcss.com/docs/preflight and https://tailwindcss.com/docs/addi
 
 ### Building Blade Templates
 
-Partials wie Header und Footer
-Mit einfachen Komponenten wie dem TailwindUI Header ist ganz schnell eine funktionierende UI vorhanden. Das freie Beispiel in welcome.blade.php kopiert und mit entsprechenden Blade Directives für Login, Register und Dashboard ausgestattet ergibt schon eine klickbare Anwendung mit Login.
+...
 
-### Use DB ...
+## Step 5: Use DB ...
 
-Categories
+Test with categories
 Then proceed to packages...
+And organisations
+
+## Step 6: Make it work
+
+...
+
+## Step 7: Persistence, Caching
+
+... prevent from making too many requests to Github API.
+
+## Step 8: Search
+
+Laravel, then Meilisearch?
+
+## Step 9: Grab Data
+
+How to discover packages
+
+## Step 10: Make it awesome
+
+Auto-create news, package-updates and form the portal.
+
+## Step 11: Launch
+
+...
