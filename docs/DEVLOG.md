@@ -39,60 +39,23 @@ Save the Skipper-file into the projects root-folder.
 
 Now you can scaffold your own entities within the Application module, save and Export to ORM ...
 
+## Step 4: Basic Templating
 
-## Step 4: Templating
+### Defining Colors in TailwindCSS
 
-Generelle Infos zu Tailwind unter https://tailwindcss.com/docs/guides/laravel und https://laravel.com/docs/8.x/mix.
+First, the easy way, I used the tailwind-config from https://github.com/laravel/laravel.com-next/blob/master/tailwind.config.js.
 
-Schrift
-In Laravel wird standardmäßig Nunito verwendet. Wir ersetzen das durch unsere Hausschrift Manjari (https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap) in tailwind.config.js, welcome.blade.php, app.blade.php, guest.blade.php, layout.blade.php und app.css (letzteres durch npm run dev).
+Then I ran npm run dev.
 
-Farben
-Die Definition der Grundfarben ist sehr einfach. In der tailwind.config.js habe ich vier Farben definiert:
+See https://tailwindcss.com/docs/guides/laravel and https://laravel.com/docs/8.x/mix.
 
-    theme: {
-        extend: {
-            colors: {
-                'heco-blue': '#005D9D',
-                'heco-grey': '#83888B',
-                'heco-lite': '#EAEAEA',
-                'heco-dark': '#5A6166',
-            },
-            fontFamily: {
-                sans: ['Manjari', ...defaultTheme.fontFamily.sans],
-            },
-        },
-    },
-Danach npm run watch, npm run dev oder npm run prod
+### Defining Base Styles
 
-Verwenden kann man dann z. B. die Klasse bg-heco-blue oder text-heco-grey ...
+In resources/css/app.css, but currently I do not need additional styling.
 
-Mehr Infos: https://tailwindcss.com/docs/customizing-colors
+See https://tailwindcss.com/docs/preflight and https://tailwindcss.com/docs/adding-base-styles
 
-Base Styles
-Die Definition der Base Styles ist in resources/css/app.css am Besten aufgehoben:
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-    h1 {
-      @apply text-2xl;
-    }
-    h2 {
-      @apply text-xl;
-    }
-    h3 {
-        @apply text-lg;
-      }
-    a {
-        @apply text-heco-blue underline;
-    }
-  }
-An diese Stelle gehört später auch (sowenig wie möglich) Custom CSS.
-
-Mehr Infos: https://tailwindcss.com/docs/preflight, https://tailwindcss.com/docs/adding-base-styles
+### Building Blade Templates
 
 Partials wie Header und Footer
 Mit einfachen Komponenten wie dem TailwindUI Header ist ganz schnell eine funktionierende UI vorhanden. Das freie Beispiel in welcome.blade.php kopiert und mit entsprechenden Blade Directives für Login, Register und Dashboard ausgestattet ergibt schon eine klickbare Anwendung mit Login.
