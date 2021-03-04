@@ -39,7 +39,7 @@ Save the Skipper-file into the projects root-folder.
 
 Now you can scaffold your own entities within the Application module, save and Export to ORM ...
 
-## Step 4: Basic Templating
+## Step 4: Basic Styling
 
 ### Defining Colors in TailwindCSS
 
@@ -54,6 +54,60 @@ See https://tailwindcss.com/docs/guides/laravel and https://laravel.com/docs/8.x
 In resources/css/app.css, but currently I do not need additional styling.
 
 See https://tailwindcss.com/docs/preflight and https://tailwindcss.com/docs/adding-base-styles
+
+
+
+
+
+## Step 5: Basic Config
+
+There are some configurations, we need to set, before continuing:
+
+### Profile photos
+
+Activate the profile photos feature by uncommenting 
+
+```php
+Features::profilePhotos(),
+```
+
+in config/jetstream.php. Then do a
+
+```bash
+php artisan storage:link
+```
+
+### E-Mail Verification
+
+Activate E-Mail Verification feature by uncommenting
+
+```php
+Features::emailVerification(),
+```
+
+in config/fortify.php. 
+
+Then implement MustVerifyEmail in app/Models/User.php
+
+```php
+class User extends Authenticatable implements MustVerifyEmail
+```
+
+### Password Validation Rules
+
+To ensure safe passwords change 
+
+```php
+(new Password)->length(8)->requireSpecialCharacter()->requireUppercase()->requireNumeric()
+```
+
+in app/Actions/Fortify/PasswordValidationRules.php
+
+
+
+## Step 6: Basic Templating
+
+
 
 ### Building Blade Templates
 
@@ -81,12 +135,16 @@ Laravel, then Meilisearch?
 
 How to discover packages
 
+## Step 10: Make it useful
+
+...
+
 ## Step 10: Make it awesome
 
 Auto-create news, package-updates and form the portal.
 
 ## Step 11: Launch
 
-Test on [lpr.dcn.de](http://lpr.dcn.de/)
+Test on [lpr.dcn.de](http://lpr.dcn.de/) ... was easy.
 
 See https://www.bugblog.de/bugs-vulnerabilities/laravel-bei-all-inkl-installieren/2020/01/13/ and https://all-inkl.com/wichtig/anleitungen/skripte/sonstiges/laravel/installation_564.html
