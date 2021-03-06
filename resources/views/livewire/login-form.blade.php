@@ -25,20 +25,20 @@
     <div>
         <x-tallui.label for="email" value="{{ __('Email address') }}" />
         <div class="mt-1">
-            <x-tallui.input wire:model.defer="email" id="email" name="email" type="email" autocomplete="email" required :value="old('email')" autofocus />
+            <x-tallui.input wire:model.defer="email" id="email" name="email" type="email" autocomplete="email" required :value="old('email')" autofocus class="disableme" />
         </div>
     </div>
 
     <div>
         <x-tallui.label for="password" value="{{ __('Password') }}" />
         <div class="mt-1">
-            <x-tallui.input wire:model.defer="password" id="password" class="block w-full mt-1" type="password" name="password" required autocomplete="current-password" />
+            <x-tallui.input wire:model.defer="password" id="password" class="disableme" type="password" name="password" required autocomplete="current-password" class="disableme" />
         </div>
     </div>
 
     <div class="flex items-center justify-between">
         <div class="flex items-center">
-            <x-tallui.checkbox id="remember_me" name="remember_me" />
+            <x-tallui.checkbox id="remember_me" name="remember_me" class="disableme" />
             <label for="remember_me" class="block ml-2 text-sm text-gray-900">
                 {{ __('Remember me') }}
             </label>
@@ -54,7 +54,7 @@
     </div>
 
     <div>
-        <x-tallui.button type="submit" value="{{ __('Sign in') }}" />
+        <x-tallui.button type="submit" value="{{ __('Sign in') }}" class="disableme" />
     </div>
     </form>
 
