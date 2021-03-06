@@ -1,14 +1,7 @@
-@if ($errors->any())
-    <div {{ $attributes }}>
-        <h3 class="text-sm font-medium text-red-800">{{ __('Whoops! Something went wrong.') }}</h3>
-
-        <div class="text-sm text-red-700">
-            <ul class="list-none space-y-1">
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
+@if (session()->has('error'))
+    <div class="p-4 mb-4 rounded-md bg-red-50 animate__animated animate__shakeX">
+        <div class="text-sm font-medium text-red-800">
+            {{ session('error') }}
         </div>
     </div>
 @endif
-
