@@ -392,3 +392,7 @@
 2021-03-04 21:31:54,527 INFO exited: php (exit status 1; not expected)
 2021-03-04 21:31:55,531 INFO spawned: 'php' with pid 232
 2021-03-04 21:31:56,534 INFO success: php entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-03-05 20:03:56,427 INFO Set uid to user 0 succeeded
+2021-03-05 20:03:56,442 INFO supervisord started with pid 17
+2021-03-05 20:03:57,448 INFO spawned: 'php' with pid 19
+2021-03-05 20:03:58,451 INFO success: php entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
