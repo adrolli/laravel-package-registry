@@ -1,6 +1,6 @@
 <div class="px-4 py-8 bg-white shadow sm:rounded-md sm:px-10">
 
-    <x-tallui.validation-errors />
+    <x-tallui.validation-login />
 
     @if (session('status'))
     <div class="mb-4 text-sm font-medium text-green-600">
