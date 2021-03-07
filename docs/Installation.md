@@ -30,4 +30,6 @@ composer install
 
 Todo:
 
-Mail is not configured - Expected response code 250 but got code "550", with message "550 5.7.1 Relaying denied "
+- Publish Config, Views (and Assets? Testclass for .tallui)
+
+- Mail is not configured - Expected response code 250 but got code "550", with message "550 5.7.1 Relaying denied "
