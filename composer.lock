@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/adrolli/tallui.git",
-                "reference": "7246751c0538811be7fd6f4197a82fea0ea32eb8"
+                "reference": "152acb4279201445f294bda205c9fb981af48748"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/adrolli/tallui/zipball/7246751c0538811be7fd6f4197a82fea0ea32eb8",
-                "reference": "7246751c0538811be7fd6f4197a82fea0ea32eb8",
+                "url": "https://api.github.com/repos/adrolli/tallui/zipball/152acb4279201445f294bda205c9fb981af48748",
+                "reference": "152acb4279201445f294bda205c9fb981af48748",
                 "shasum": ""
             },
             "require": {
@@ -62,7 +62,7 @@
                 "issues": "https://github.com/adrolli/tallui/issues",
                 "source": "https://github.com/adrolli/tallui/tree/main"
             },
-            "time": "2021-03-07T00:23:50+00:00"
+            "time": "2021-03-07T01:25:48+00:00"
         },
         {
             "name": "asm89/stack-cors",
