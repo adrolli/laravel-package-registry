@@ -4,8 +4,66 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0777733e0a1c75f74f8c09223bbb966f",
+    "content-hash": "f322080ec5426e5a819f0acb00c8f0dd",
     "packages": [
+        {
+            "name": "adrolli/tallui",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/adrolli/tallui.git",
+                "reference": "7246751c0538811be7fd6f4197a82fea0ea32eb8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adrolli/tallui/zipball/7246751c0538811be7fd6f4197a82fea0ea32eb8",
+                "reference": "7246751c0538811be7fd6f4197a82fea0ea32eb8",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^8.0",
+                "livewire/livewire": "^2.0",
+                "php": "^7.4|^8.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "TallUi\\TallUi\\TallUiServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TallUi\\TallUi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alf Drollinger",
+                    "email": "alf@drollinger.info"
+                }
+            ],
+            "description": "Laravel UI for the TALL-Stack",
+            "keywords": [
+                "laravel",
+                "livewire",
+                "livewire components",
+                "tailwindcss",
+                "tall-stack"
+            ],
+            "support": {
+                "issues": "https://github.com/adrolli/tallui/issues",
+                "source": "https://github.com/adrolli/tallui/tree/main"
+            },
+            "time": "2021-03-07T00:23:50+00:00"
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.0.2",
@@ -2319,6 +2377,66 @@
                 "source": "https://github.com/paragonie/constant_time_encoding"
             },
             "time": "2020-12-06T15:14:20+00:00"
+        },
+        {
+            "name": "ph7jack/livewire-ui",
+            "version": "dev-refactoration",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PH7-Jack/wireui.git",
+                "reference": "4d5da737f0b020f9b9564309262d7fd0cae4d4d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PH7-Jack/wireui/zipball/4d5da737f0b020f9b9564309262d7fd0cae4d4d7",
+                "reference": "4d5da737f0b020f9b9564309262d7fd0cae4d4d7",
+                "shasum": ""
+            },
+            "require": {
+                "livewire/livewire": "^2.0",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "laravel/framework": "^7.0|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "WireUi\\App\\Providers\\WireUiServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "WireUi\\": "/",
+                    "WireUi\\App\\": "app/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pedro Henrique",
+                    "email": "pedrolivertwd@gmail.com"
+                }
+            ],
+            "description": "Livewire ui components with tailwind base style",
+            "keywords": [
+                "blade components",
+                "laravel components",
+                "livewire components",
+                "livewire-ui",
+                "wireui"
+            ],
+            "support": {
+                "issues": "https://github.com/PH7-Jack/wireui/issues",
+                "source": "https://github.com/PH7-Jack/wireui/tree/refactoration"
+            },
+            "time": "2021-02-23T00:01:25+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -8037,7 +8155,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "adrolli/tallui": 20,
+        "ph7jack/livewire-ui": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
