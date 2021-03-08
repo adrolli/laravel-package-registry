@@ -4,6 +4,18 @@
 
 
 
+- Alte Livewire controller löschen und reste aufräumen
+- Paket vom PH7 typ löschen
+- weitermachen ...
+
+
+
+- https://freek.dev/1886-simplifying-service-providers-in-laravel-packages
+- https://github.com/spatie/laravel-package-tools
+- https://github.com/PH7-Jack/wireui/tree/refactoration
+- https://github.com/redbastie/tailwire/tree/master/src
+- https://laravel.com/docs/8.x/packages
+- Package Course at Spatie
 - Layouts, wie?
 - Tailwind Config, wie?
 - Commands

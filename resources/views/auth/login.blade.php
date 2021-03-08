@@ -8,7 +8,7 @@
 
         <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
 
-            <livewire:tallui:login />
+            <livewire:tallui:auth.login />
 
             <!-- livewire:login-form / -->
 
