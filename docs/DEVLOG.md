@@ -1,5 +1,7 @@
 # Devlog
 
+
+
 ## Step 1: Create Laravel App using Laravel Sail
 
 Windows: use Microsoft Terminal and Ubuntu WSL2:
@@ -11,6 +13,8 @@ cd hecoweb && sail up
 ```
 
 Add the alias to ~/.bashrc.
+
+
 
 ## Step 2: Install Laravel Jetstream
 
@@ -29,6 +33,8 @@ Change .env DB_HOST to mysql, sail down -v, sail up, sail shell and php artisan 
 
 See https://jetstream.laravel.com/
 
+
+
 ## Step 3: Prepare to use Skipper
 
 Connect MySQL Workbench, reverse engineer and save the model. Import the model into Skipper.
@@ -38,6 +44,8 @@ Now there are six entities in Skipper. Name the module (e. g. Laravel core) and 
 Save the Skipper-file into the projects root-folder. 
 
 Now you can scaffold your own entities within the Application module, save and Export to ORM ...
+
+
 
 ## Step 4: Basic Styling
 
@@ -54,8 +62,6 @@ See https://tailwindcss.com/docs/guides/laravel and https://laravel.com/docs/8.x
 In resources/css/app.css, but currently I do not need additional styling.
 
 See https://tailwindcss.com/docs/preflight and https://tailwindcss.com/docs/adding-base-styles
-
-
 
 
 
@@ -119,17 +125,25 @@ Test with categories
 Then proceed to packages...
 And organisations
 
+
+
 ## Step 6: Make it work
 
 ...
+
+
 
 ## Step 7: Persistence, Caching
 
 ... prevent from making too many requests to Github API.
 
+
+
 ## Step 8: Search
 
 Laravel, then Meilisearch?
+
+
 
 ## Step 9: Grab Data
 
