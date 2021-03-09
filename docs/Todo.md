@@ -4,23 +4,38 @@
 
 
 
-- Alte Livewire controller löschen und reste aufräumen
-- Paket vom PH7 typ löschen
-- weitermachen ...
-
-
-
+- Auth Login perfektionieren, Auth Register finalisieren, Rest vom Auth-Part, siehe https://laravel.com/docs/8.x/blade
+- Homepage und Dashboard, mobile
+- How to Tailwind? 
+  - Colors, Gradients
+  - Fonts, Headings
+  - Roundings, Shadows, Borders
+  - Stubs? https://github.com/laravel-frontend-presets/tailwindcss/tree/main/src und https://github.com/laravel-frontend-presets/tailwindcss/blob/main/src/TailwindCssPresetServiceProvider.php
+  - More Stubs? https://arievisser.com/blog/how-to-use-stub-customization-in-laravel/
+- Social Auth nur wenns auch tut, übersetzen
+- Email-Adresse am User-Feld nur wenns auch so ist, siehe fortify-config
+- Installation -> ersetzen der Default-Views, siehe https://github.com/laravel-frontend-presets/tailwindcss/blob/main/src/TailwindCssPreset.php
+- https://tailwindcomponents.com/component/login-showhide-password Showhide PWD
 - https://freek.dev/1886-simplifying-service-providers-in-laravel-packages
-- https://github.com/spatie/laravel-package-tools
-- https://github.com/PH7-Jack/wireui/tree/refactoration
-- https://github.com/redbastie/tailwire/tree/master/src
+
+- That was interesting: https://github.com/redbastie/tailwire/tree/master/src
 - https://laravel.com/docs/8.x/packages
 - Package Course at Spatie
 - Layouts, wie?
 - Tailwind Config, wie?
 - Commands
-- Languages
 - UI man!
+- docs
+
+
+
+Tests
+
+- Mit Jetstream
+- Ohne Jetstream
+- Mit Tailwind Preset
+- mit anderem Gedöns
+- Merken und Tests automatisieren?
 
 
 
