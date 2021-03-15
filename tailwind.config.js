@@ -55,8 +55,6 @@ module.exports = {
                     "800": "#484848",
                     "900": "#262626"
                 },
-                "tui-white": "#ffffff",
-                "tui-black": "#000000",
                 "tui-main": "#003358",
                 "tui-main-header": "#012340",
                 "tui-main-text": "#000000",

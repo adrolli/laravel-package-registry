@@ -1,3 +1,5 @@
+Require Psalm etc.
+
 TailwindCSS Theme:
 
 
@@ -46,7 +48,9 @@ https://tailwindcss.com/docs/customizing-colors
 
 https://laravel.com/docs/8.x/mix -> .env -> mix -> tailwind -> blade
 
+https://github.com/vendeka-nl/tailwind-config-php
 
+https://gist.github.com/dillonchanis/7b76ae89d13b662eb44866f570da817b - Text Gradients (but not on SVGs...), maybe better to https://tailwindcss.com/docs/background-clip
 
 - tui-primary (array)
 - tui-secondary (array)

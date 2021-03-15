@@ -1,0 +1,49 @@
+Installieren:
+- [x] Virtuelle Computer, Hyper-V, WSL
+- [x] Office + Onedrive, Teams
+- [x] Google Chrome - https://toggl.com/track/toggl-desktop/
+- [x] Adobe Cloud - https://creativecloud.adobe.com/cc
+- [x] Adobe Photoshop, Illustrator, Acrobat, Premiere, Lightroom, Classic, InDesign, Bridge, XD
+- [x] Toggl Track - https://toggl.com/track/toggl-desktop/
+- [x] Node.js
+- [x] PHP 8 mit Apache, MySQL - https://www.apachefriends.org/de/index.html
+- [x] Composer (global)
+- [x] Git for Windows - https://gitforwindows.org/
+- [x] Github Desktop - https://desktop.github.com/
+- [x] Docker Desktop - https://www.docker.com/products/docker-desktop
+- [x] VS Code - https://code.visualstudio.com/
+- [x] Windows Terminal - https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701
+- [x] Slack - https://slack.com/intl/de-de/downloads/windows
+- [x] Bitvise SSH Client - https://www.bitvise.com/download-area
+- [x] Filezilla - https://filezilla-project.org/
+- [x] Firefox - https://www.mozilla.org/en-US/firefox/windows/
+- [x] Typora - https://typora.io/
+- [x] Notepad++ - https://notepad-plus-plus.org/downloads/
+- [x] Keepass - https://keepass.info/download.html
+- [x] Greenshot - https://getgreenshot.org/
+- [x] Nextcloud - https://nextcloud.com/install/
+- [x] Ubuntu - Windows App Store
+- [x] Pano2VR
+- [x] Supermailer - https://www.supermailer.de/
+- [x] SiteAnalyzer
+- [x] WinHTTrack / Cyotek Webcopy - https://www.cyotek.com/cyotek-webcopy
+- [x] Riot - https://riot-optimizer.com/
+- [x] Ray von Spatie
+- [x] MySQL Workbench
+- [x] Skipper
+- [x] Tableplus?
+- [x] SwyxIt?
+- [x] Teamviewer
+
+Einrichten:
+- [x] Chrome (Login Alf) - Plugins und Shortcuts
+- [x] Onedrive (heco / Alf / Privat)
+- [x] Outlook  (heco / Alf)
+- [x] Slack (co-IT = alf@drollinger.info, heco = alf.drollinger@heco.de)
+- [x] Keepass DB
+- [x] VS Code Config & Plugins (via Sync)
+- [x] Windows Terminal
+- [x] Filezilla
+- [x] Nextcloud -> Keepass-DB?
+- [x] Dev-Umgebung (.env) optimieren
+- [x] Repos ziehen und hochfahren

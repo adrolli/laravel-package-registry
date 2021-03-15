@@ -1,88 +1,5 @@
     <x-website-layout>
 
-
-        <div class="w-1 h-20 bg-tui-primary-50"></div>
-        <div class="w-1 h-20 bg-tui-primary-100"></div>
-        <div class="w-1 h-20 bg-tui-primary-200"></div>
-        <div class="w-1 h-20 bg-tui-primary-300"></div>
-        <div class="w-1 h-20 bg-tui-primary-400"></div>
-        <div class="w-1 h-20 bg-tui-primary-500"></div>
-        <div class="w-1 h-20 bg-tui-primary-600"></div>
-        <div class="w-1 h-20 bg-tui-primary-700"></div>
-        <div class="w-1 h-20 bg-tui-primary-800"></div>
-        <div class="w-1 h-20 bg-tui-primary-900"></div>
-        <div class="w-1 h-20 bg-tui-main-bg"></div>
-
-soll so funzen:
-
-        <div class="grid grid-cols-1 gap-8">
-            {{ colorset }}
-        </div>
-
-
-        bg-{{ $tui_class }}-{{ $array_colors }}
-
-        "tui-primary": {
-            "50": "#e4e8ed",
-            "100": "#bac7d4",
-            "200": "#8ea2b7",
-            "300": "#647f9a",
-            "400": "#426587",
-            "500": "#174c77",
-            "600": "#0e456f",
-            "700": "#023c64",
-            "800": "#003358",
-            "900": "#012340"
-        },
-        "tui-secondary": {
-            "50": "#e9f5e9",
-            "100": "#cae5c9",
-            "200": "#a8d5a8",
-            "300": "#86c585",
-            "400": "#6db96c",
-            "500": "#56ad53",
-            "600": "#4d9e4a",
-            "700": "#428c3f",
-            "800": "#387b35",
-            "900": "#265c24"
-        },
-        "tui-grey": {
-            "50": "#fbfbfb",
-            "100": "#f6f6f6",
-            "200": "#f1f1f1",
-            "300": "#e6e6e6",
-            "400": "#c3c3c3",
-            "500": "#a5a5a5",
-            "600": "#7b7b7b",
-            "700": "#676767",
-            "800": "#484848",
-            "900": "#262626"
-        },
-        "tui-white": "#ffffff",
-        "tui-black": "#000000",
-        "tui-main": "#003358",
-        "tui-main-header": "#012340",
-        "tui-main-text": "#000000",
-        "tui-main-bg": "#bac7d4",
-        "tui-section": "#484848",
-        "tui-section-header": "#f6f6f6",
-        "tui-section-text": "#ffffff",
-        "tui-section-bg": "#f6f6f6",
-        "tui-design": "#0460D9",
-        "tui-design-header": "#0460D9",
-        "tui-design-text": "#ffffff",
-        "tui-design-bg": "#0460D9",
-        "tui-cta": "#428C3F",
-        "tui-cta-header": "#428C3F",
-        "tui-cta-text": "#ffffff",
-        "tui-cta-bg": "#e9f5e9",
-        "tui-info": "#0460D9",
-        "tui-success": "#428C3F",
-        "tui-warning": "#FFC20E",
-        "tui-danger": "#E71A19",
-
-
-
 <div class="bg-white">
     <div class="relative overflow-hidden">
       <header class="relative">
@@ -227,6 +144,17 @@ soll so funzen:
             </div>
           </div>
         </div>
+
+
+        <div class="relative pt-16 bg-gray-50 sm:pt-24 lg:pt-32">
+            <div class="max-w-md px-4 mx-auto sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
+        <div class="grid grid-cols-1 gap-8">
+            <livewire:tallui:theme.theme-info />
+        </div>
+
+    </div>
+</div>
+
 
         <!-- Feature section with screenshot -->
         <div class="relative pt-16 bg-gray-50 sm:pt-24 lg:pt-32">
