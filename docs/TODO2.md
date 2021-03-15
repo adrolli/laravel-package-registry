@@ -50,7 +50,10 @@ https://laravel.com/docs/8.x/mix -> .env -> mix -> tailwind -> blade
 
 https://github.com/vendeka-nl/tailwind-config-php
 
+SVG - Fill and Stroke: https://tailwindcss.com/docs/fill
 https://gist.github.com/dillonchanis/7b76ae89d13b662eb44866f570da817b - Text Gradients (but not on SVGs...), maybe better to https://tailwindcss.com/docs/background-clip
+siehe auch https://github.com/tailwindlabs/tailwindcss-playground/blob/master/public/index.html
+and use https://jakearchibald.github.io/svgomg/
 
 - tui-primary (array)
 - tui-secondary (array)
