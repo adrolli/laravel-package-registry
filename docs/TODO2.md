@@ -55,6 +55,8 @@ https://gist.github.com/dillonchanis/7b76ae89d13b662eb44866f570da817b - Text Gra
 siehe auch https://github.com/tailwindlabs/tailwindcss-playground/blob/master/public/index.html
 and use https://jakearchibald.github.io/svgomg/
 
+SVG in BG - https://www.base64encode.org/ - https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+
 - tui-primary (array)
 - tui-secondary (array)
 - tui-grey (array)
