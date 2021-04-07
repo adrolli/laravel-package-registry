@@ -42,6 +42,21 @@
         </div>
         <!-- End Jumbotron -->
 
+        x-tui-form-button :action="route('logout')" form="inline" ...
+        should make a style="display: inline;" on the form tag.
+
+        Naming:
+        livewire:tui:auth.login />
+        x-tui.svg.logo />
+        x-tui-form-button />
+        x-tui-loginform />
+
+
+        <div class="pt-15 bg-gray-50">
+
+            Is this a link? <x-form-button :action="route('logout')" type="success" size="lg" width="full" tui="forgetit" form="inline">Sign Out</x-form-button>
+
+        </div>
 
         <!-- Feature section with screenshot -->
         <div class="relative pt-16 bg-gray-50 sm:pt-24 lg:pt-32">

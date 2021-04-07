@@ -48,7 +48,7 @@ services:
         healthcheck:
           test: ["CMD", "redis-cli", "ping"]
     meilisearch:
-        image: 'getmeili/meilisearch:latest'
+        image: 'getmeili/meilisearch:v0.19.0'
         ports:
             - '${FORWARD_MEILISEARCH_PORT:-7700}:7700'
         volumes:
